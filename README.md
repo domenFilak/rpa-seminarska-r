@@ -1,5 +1,4 @@
-# rpa-seminarska-r
-Seminarska naloga pri predmetu RPA.
+# Seminarska naloga pri predmetu RPA
 Tema seminarske naloge: Spletna trgovina
 
 ## ANGULAR:
