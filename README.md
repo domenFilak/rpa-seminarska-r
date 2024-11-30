@@ -3,6 +3,6 @@ Tema seminarske naloge: Spletna trgovina
 
 ## ANGULAR:
 
-## SERVER:
+## EXPRESSJS:
 
-## MONGODB SETUP:
+## MONGODB:
