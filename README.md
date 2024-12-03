@@ -3,6 +3,8 @@ Tema seminarske naloge: Spletna trgovina
 
 ## ANGULAR:
 
+##### Ostal na part6
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
 ### Development server
