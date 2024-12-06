@@ -1,5 +1,5 @@
 # Seminarska naloga pri predmetu RPA
-Tema seminarske naloge: Spletna trgovina z izdelki zabavne elektronike (telefoni, tablice, računalniki)
+Tema seminarske naloge: Spletna trgovina z različnimi živilskimi izdelki (hitra hrana, začimbe, sladkarije)
 
 ## ANGULAR:
 
