@@ -1,4 +1,4 @@
-# Frontend
+# Frontend Angular
 
 Ta projekt je bil generiran s pomočjo: [Angular CLI](https://github.com/angular/angular-cli), verzija 17.0.9.
 
