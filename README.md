@@ -1,8 +1,7 @@
 # Spletna Trgovina
 
-## Značke
 # Status projekta
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+Na začetku, se izboljšuje.
 
 
 ## Opis
