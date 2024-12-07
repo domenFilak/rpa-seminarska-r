@@ -1,6 +1,6 @@
 # Spletna Trgovina
 
-# Status projekta
+**Status projekta**
 Se izvaja (izboljšuje)
 
 

@@ -70,6 +70,21 @@ li a img {
     margin-top: 0.2rem;
 }
 
+.tags {
+    flex: 9;
+}
+
+.tags span {
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: grey;
+    margin-right: 0.3rem;
+    padding: 0 0.5rem;
+    margin-top: 0.2rem;
+}
+
 .cook-time {
     font-size: 0.9rem;
     flex: 3;

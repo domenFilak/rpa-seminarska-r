@@ -10,15 +10,10 @@
                     ❤
                 </span>
                 <div class="product-item-footer">
-                    <div class="origins">
-                        <span *ngFor="let origin of food.origins">
-                            {{origin}}
+                    <div class="tags">
+                        <span *ngFor="let tag of food.tags">
+                            {{tag}}
                         </span>
-                    </div>
-
-                    <div class="cook-time">
-                        <span>🕒</span>
-                        {{food.cookTime}}
                     </div>
                 </div>
                 <div class="price">
