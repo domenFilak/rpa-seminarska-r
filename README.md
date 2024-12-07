@@ -29,6 +29,7 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
 
 ## Zaslonski posnetki
 Trenutno stanje:
+
 <img src="image.png" alt="Zaslonski posnetek aplikacije" width="600">
 
 ## Namestitev
