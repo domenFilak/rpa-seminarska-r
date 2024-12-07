@@ -28,6 +28,7 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
    - Dodajanje in prikaz mnenj ter ocen izdelkov.
 
 ## Zaslonski posnetki
+Trenutno stanje:
 <img src="image.png" alt="Zaslonski posnetek aplikacije" width="600">
 
 ## Namestitev
