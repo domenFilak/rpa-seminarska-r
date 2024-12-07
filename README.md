@@ -1,7 +1,7 @@
 # Spletna Trgovina
 
 # Status projekta
-Na začetku, se izboljšuje.
+Se izvaja (izboljšuje)
 
 
 ## Opis
