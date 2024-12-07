@@ -1,5 +1,10 @@
 # Spletna Trgovina
 
+## Značke
+# Status projekta
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+
+
 ## Opis
 **Spletna Trgovina** je spletna aplikacija, ki omogoča uporabnikom enostaven in pregleden nakup izdelkov preko spleta. Projekt združuje funkcionalnosti spletne trgovine, kot so prijava in registracija uporabnikov, pregled izdelkov, filtriranje in razvrščanje, košarica ter upravljanje naročil. 
 
@@ -23,10 +28,6 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
 6. **Ocene in mnenja**
    - Dodajanje in prikaz mnenj ter ocen izdelkov.
 
-## Značke
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-
 ## Zaslonski posnetki
 /
 
@@ -34,7 +35,7 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
 Za namestitev in zagon projekta sledite spodnjim korakom:
 
 1. **Kloniranje repozitorija**  
-   ```bash git clone https://github.com/domenFilak/rpa-seminarska-r.git
+   bash git clone https://github.com/domenFilak/rpa-seminarska-r.git
 
 ## Uporaba
 1. Prijavite se ali registrirajte kot nov uporabnik.
