@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
       if (params.searchTerm){
         this.foods = this.foodService.getAllFoodsBySearchTerm(params.searchTerm);
       }
+      else if (params.tag) { //ce url v brskalniku ne vsebuje parametra searchTerm, pogledamo, če slučajno vsebuje parameter tag in prikažemo ustrezno vrednost
+        this.foods = this.foodService.getAllFoodsByTag(params.tag);
+      }
       else {
         this.foods = foodService.getAll(); //ZA KASNEJE ==> tukaj PRVI fetch iz podatkovne baze, glede na to kateri jezik je izbran
       }

@@ -12,7 +12,8 @@ const routes: Routes = [
 
 
   {path:'', component: HomeComponent}, //če bi tukaj dodal otroke, bi se te komponente prikazovale namesto <router-outlet> v HomeComponent (njihov starš)
-  {path: 'search/:searchTerm', component: HomeComponent}
+  {path: 'search/:searchTerm', component: HomeComponent},
+  {path: 'tag/:tag', component: HomeComponent}
 ];
 
 @NgModule({

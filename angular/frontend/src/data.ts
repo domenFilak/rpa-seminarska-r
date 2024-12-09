@@ -1,4 +1,5 @@
 import { Food } from "./app/shared/models/food";
+import { Tag } from "./app/shared/models/tag";
 
 export const sample_foods: Food[] = [
     {
@@ -9,7 +10,7 @@ export const sample_foods: Food[] = [
         favourite: false,
         origins: ['italy'],
         imageUrl: 'assets/food-1.jpg',
-        tags: ['FastFood', 'Pizza', 'Lunch'],
+        tags: ['FastFood'],
       },
       {
         id:'2',
@@ -19,7 +20,7 @@ export const sample_foods: Food[] = [
         favourite: true,
         origins: ['persia', 'middle east', 'china'],
         imageUrl: 'assets/food-2.jpg',
-        tags: ['SlowFood', 'Lunch'],
+        tags: ['MeatDish'],
       },
       {
         id:'3',
@@ -29,7 +30,7 @@ export const sample_foods: Food[] = [
         favourite: false,
         origins: ['germany', 'us'],
         imageUrl: 'assets/food-3.jpg',
-        tags: ['FastFood', 'Hamburger'],
+        tags: ['FastFood'],
       },
       {
         id:'4',
@@ -39,7 +40,7 @@ export const sample_foods: Food[] = [
         favourite: true,
         origins: ['belgium', 'france'],
         imageUrl: 'assets/food-4.jpg',
-        tags: ['FastFood', 'Fry'],
+        tags: ['FastFood'],
       },
       {
         id:'5',
@@ -49,7 +50,7 @@ export const sample_foods: Food[] = [
         favourite: false,
         origins: ['india', 'asia'],
         imageUrl: 'assets/food-5.jpg',
-        tags: ['SlowFood', 'Soup'],
+        tags: ['Soup'],
       },
       {
         id:'6',
@@ -59,6 +60,15 @@ export const sample_foods: Food[] = [
         favourite: false,
         origins: ['italy'],
         imageUrl: 'assets/food-6.jpg',
-        tags: ['FastFood', 'Pizza', 'Lunch'],
+        tags: ['FastFood'], //tag se lahko modificira tako, da prikazuje, v kateri kategoriji je dani food!!!
+                            //na isti nacin se lahko poda recimo, v katerih poslovalnicah se nahaja dani food => polje z array-om stringov ki so poslovalnice
       }
 ];
+
+export const sample_tags:Tag[] = [ //so naše KATEGORIJE!!
+  { name: 'All', count: 6 },
+  { name: 'FastFood', count: 4 },
+  { name: 'MeatDish', count: 1 },
+  { name: 'Soup', count: 1 },
+  { name: 'Desert', count: 0}
+]
