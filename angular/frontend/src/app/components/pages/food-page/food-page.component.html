@@ -1,0 +1,56 @@
+<div class="container">
+    <!-- Prikaz slike hrane, uporablja property binding 
+     za dinamično polnjenje vira slike in nadomestnega besedila -->
+    <img [src]="food.imageUrl" [alt]="food.name"/>
+
+    <div class="details">
+        <div class="header">
+            <!-- Ime hrane, prikazano s pomočjo interpolacije -->
+            <span class="name">
+                {{food.name}}
+            </span>
+            <span class="favourite {{food.favourite? '': 'not'}}">❤</span>
+        </div>
+        <div class="rating">
+            <!--<star-rating
+            [value]="food.stars"
+            [totalstars]="5"
+            checkedcolor="red"
+            uncheckedcolor="black"
+            size="25px"
+            [readonly]="true">
+        </star-rating>-->
+        </div>
+
+        <!-- Prikaz izvorov hrane, uporablja *ngFor za iteracijo čez seznam -->
+        <div class="origins">
+            <span *ngFor="let origin of food.origins">
+                {{origin}}
+            </span>
+        </div>
+
+        <!-- Prikaz oznak hrane, uporablja *ngFor in routerLink za navigacijo -->
+        <div class="tags">
+            <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+                {{tag}}
+            </a>
+        </div>
+
+        <div class="cook-time">
+            <span>
+                Time to cook about <strong>{{food.cookTime}}</strong> minutes.
+            </span>
+        </div>
+
+        <!-- Prikaz cene hrane, formatirano z uporabo pipe 'currency' -->
+        <div class="price">
+            <span>
+                {{food.price | currency}}
+            </span>
+        </div>
+
+        <!-- Gumb za dodajanje hrane v košarico, kliče metodo addToCart ob kliku -->
+        <button (click)="addToCart()">Add To Cart</button>
+    </div>
+</div>
+

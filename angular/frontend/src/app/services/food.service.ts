@@ -27,4 +27,8 @@ export class FoodService {
     return tag === "All" ? this.getAll() : this.getAll().filter(food => food.tags?.includes(tag));
   }
 
+  getFoodById(foodId:string):Food{ //poiščemo hrano za prikaz po id-ju hrane, določene na katero kliknemo
+    return this.getAll().find(food => food.id == foodId) ?? new Food();
+  }
+
 }
