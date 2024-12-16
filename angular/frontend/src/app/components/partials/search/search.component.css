@@ -1,7 +1,8 @@
 div{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     margin-top: 3rem;
+    margin-right: 3rem;
     margin-bottom: 1.5rem;
 
 }
