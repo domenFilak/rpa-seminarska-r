@@ -1,1 +1,43 @@
-<p>cart-page works!</p>
+<app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+<div class="container">
+<ul>
+  <li *ngFor="let cartItem of cart.items">
+    <div>
+        <img routerLink="/food/{{cartItem.food.id}}" [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+    </div>
+    <div>
+      <a routerLink="/food/{{cartItem.food.id}}">
+        {{cartItem.food.name}}
+      </a>
+    </div>
+    <div class="quantity-container">
+      <!-- Input field for quantity -->
+      <input 
+      type="text"
+      [(ngModel)]="cartItem.quantity"
+      (blur)="changeQuantity(cartItem, cartItem.quantity)"
+      style="width: 50px; text-align: center;" 
+    />
+      
+      <!-- Buttons to increase/decrease quantity -->
+      <button (click)="changeQuantity(cartItem, cartItem.quantity - 1)" [disabled]="cartItem.quantity <= 1">-</button>
+      <button (click)="changeQuantity(cartItem, cartItem.quantity + 1)" [disabled]="cartItem.quantity >= 10">+</button>
+    </div>
+    <div>
+      {{cartItem.price | currency}}
+    </div>
+    <div>
+      <button class="remove-button" (click)="removeFromCart(cartItem)">
+        Remove
+      </button>
+    </div>
+  </li>
+</ul>
+<div class="checkout">
+  <div>
+    <div class="foods-count">{{cart.totalCount}}</div>
+    <div class="total-price">{{cart.totalPrice|currency}}</div>
+  </div>
+  <a routerLink="/checkout">Proceed to Checkout</a>
+</div>
+</div>

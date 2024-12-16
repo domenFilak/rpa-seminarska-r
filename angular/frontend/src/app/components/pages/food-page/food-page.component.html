@@ -1,6 +1,5 @@
 <div class="container">
-    <!-- Prikaz slike hrane, uporablja property binding 
-     za dinamično polnjenje vira slike in nadomestnega besedila -->
+    <!-- Prikaz slike hrane, uporablja property binding za dinamično polnjenje vira slike in nadomestnega besedila -->
     <img [src]="food.imageUrl" [alt]="food.name"/>
 
     <div class="details">
@@ -9,17 +8,10 @@
             <span class="name">
                 {{food.name}}
             </span>
-            <span class="favourite {{food.favourite? '': 'not'}}">❤</span>
+            <span class="favourite {{food.favourite ? '' : 'not'}}">❤</span>
         </div>
         <div class="rating">
-            <!--<star-rating
-            [value]="food.stars"
-            [totalstars]="5"
-            checkedcolor="red"
-            uncheckedcolor="black"
-            size="25px"
-            [readonly]="true">
-        </star-rating>-->
+            <!-- Star rating can go here if needed -->
         </div>
 
         <!-- Prikaz izvorov hrane, uporablja *ngFor za iteracijo čez seznam -->
@@ -54,3 +46,9 @@
     </div>
 </div>
 
+<!-- Modal Component to show when item is added to the cart -->
+<app-confirmation-modal 
+  *ngIf="showModal" 
+  (closeModal)="closeModal($event)" 
+  (navigateToCart)="goToCart()">
+</app-confirmation-modal>

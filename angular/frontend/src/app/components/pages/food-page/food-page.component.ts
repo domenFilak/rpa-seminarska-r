@@ -4,35 +4,45 @@ import { FoodService } from '../../../services/food.service';
 import { Food } from '../../../shared/models/food';
 import { CartService } from '../../../services/cart.service';
 
-
 @Component({
   selector: 'app-food-page',
   templateUrl: './food-page.component.html',
   styleUrls: ['./food-page.component.css']
 })
 export class FoodPageComponent implements OnInit {
-  // Lastnost za hranjenje podatkov o hrani; `!` označuje, da bo vrednost inicializirana pozneje
   food!: Food;
+  showModal = false; 
 
-  // Konstruktor injicira odvisnosti za dostop do poti, servisov in routerja
-  constructor(activatedRoute:ActivatedRoute, foodService:FoodService,
-    private cartService:CartService, private router: Router) {
-    // Naročanje na spremembe parametrov poti  
+  constructor(
+    activatedRoute: ActivatedRoute,
+    private foodService: FoodService,
+    private cartService: CartService,
+    private router: Router
+  ) {
     activatedRoute.params.subscribe((params) => {
-      // Če parameter 'id' obstaja, pridobi podatke o hrani prek `FoodService`
-      if(params.id)
-        this.food = foodService.getFoodById(params.id)
-    })
+      if (params.id) {
+        this.food = foodService.getFoodById(params.id);
+      }
+    });
   }
 
-  ngOnInit(): void {
-      
+  ngOnInit(): void {}
+
+  addToCart() {
+    this.cartService.addToCart(this.food); // Add food to the cart
+    this.showModal = true;  // Show the modal
   }
 
-  // Metoda za dodajanje hrane v košarico in navigacijo na stran košarice
-  addToCart(){
-    this.cartService.addToCart(this.food); // Dodaj hrano v košarico
-    this.router.navigateByUrl('/cart-page'); // Preusmeri uporabnika na stran košarice
+  // Close the modal and continue shopping
+  closeModal(isShopping: boolean) {
+    this.showModal = false;
+    if (isShopping) {
+      // Continue shopping - No action needed here, just close the modal
+    }
   }
 
+  // Navigate to cart page when user chooses to go to the cart
+  goToCart() {
+    this.router.navigateByUrl('/cart-page');
+  }
 }
