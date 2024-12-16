@@ -29,7 +29,15 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
 ## Zaslonski posnetki
 Trenutno stanje:
 
-<img src="image.png" alt="Zaslonski posnetek aplikacije" width="600">
+- Iskanje po nazivu
+- Iskanje po kategorijah
+
+<img src="trenutno.png" alt="Zaslonski posnetek aplikacije" width="600">
+
+- Prikaz informacij o izdelku
+- Možnost dodajanja v košarico ob kliku na "Add to cart"
+
+<img src="info.png" alt="Zaslonski posnetek aplikacije info hrane" width="600">
 
 ## Namestitev
 Za namestitev in zagon projekta sledite spodnjim korakom:
@@ -46,4 +54,6 @@ Za namestitev in zagon projekta sledite spodnjim korakom:
 ## Podpora
 Za pomoč in podporo se obrnite na:
 - **Email:** blaz.bele@gmail.com
+- **Email:** davor.sternad@gmail.com
+- **Email:** domen.filak2001@gmail.com
 
