@@ -11,12 +11,14 @@ export class TagsComponent implements OnInit{
 
   tags?: Tag[]; //je ?, kar pomeni, da lahko obstaja tags ali pa ne
 
-  constructor(private foodService: FoodService){
-    this.tags = this.foodService.getAllTags();
-  }
+  selectedLanguageShortName: string = "sl";
+
+  constructor(private foodService: FoodService){}
 
   ngOnInit(): void {
-    
+    this.selectedLanguageShortName = localStorage.getItem('lang') || 'sl';
+
+    this.tags = this.foodService.getAllTags(this.selectedLanguageShortName);
   }
 
 }

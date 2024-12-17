@@ -13,20 +13,27 @@ export class FoodPageComponent implements OnInit {
   food!: Food;
   showModal = false; 
 
+  selectedLanguageShortName: string = "sl";
+
   constructor(
-    activatedRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private foodService: FoodService,
     private cartService: CartService,
     private router: Router
-  ) {
-    activatedRoute.params.subscribe((params) => {
+  ) {}
+
+  ngOnInit(): void {
+
+    this.selectedLanguageShortName = localStorage.getItem('lang') || 'sl';
+
+    this.cartService.initialize(); //nastavi iz localstorage kosarico
+
+    this.activatedRoute.params.subscribe((params) => {
       if (params.id) {
-        this.food = foodService.getFoodById(params.id);
+        this.food = this.foodService.getFoodById(params.id, this.selectedLanguageShortName);
       }
     });
   }
-
-  ngOnInit(): void {}
 
   addToCart() {
     this.cartService.addToCart(this.food); // Add food to the cart
@@ -37,7 +44,7 @@ export class FoodPageComponent implements OnInit {
   closeModal(isShopping: boolean) {
     this.showModal = false;
     if (isShopping) {
-      // Continue shopping - No action needed here, just close the modal
+      this.router.navigateByUrl('');
     }
   }
 

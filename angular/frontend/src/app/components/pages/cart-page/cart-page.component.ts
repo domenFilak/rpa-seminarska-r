@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
 import { Cart } from '../../../shared/models/Cart';
 import { CartItem } from '../../../shared/models/CartItem';
+import { FoodService } from '../../../services/food.service';
 
 @Component({
   selector: 'app-cart-page',
@@ -11,13 +12,24 @@ import { CartItem } from '../../../shared/models/CartItem';
 export class CartPageComponent implements OnInit {
   cart!: Cart;
 
-  constructor(private cartService: CartService) {
+  selectedLanguageShortName: string = "sl";
+
+  constructor(private cartService: CartService, private foodService: FoodService) {}
+
+  ngOnInit(): void {
+
+    //PREBERI KATERI JEZIK JE V LOCAL STORAGE
+    this.selectedLanguageShortName = localStorage.getItem('lang') || 'sl';
+
+    this.cartService.initialize(); //nastavi iz localstorage kosarico
+
+    this.cartService.changeCartLanguage(this.selectedLanguageShortName);
+
     this.cartService.getCartObservable().subscribe((cart) => {
       this.cart = cart;
     });
-  }
 
-  ngOnInit(): void {}
+  }
 
   // Remove item from the cart
   removeFromCart(cartItem: CartItem) {

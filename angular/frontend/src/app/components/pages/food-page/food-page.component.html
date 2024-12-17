@@ -30,19 +30,20 @@
 
         <div class="cook-time">
             <span>
-                Time to cook about <strong>{{food.cookTime}}</strong> minutes.
+                {{'timeToCook' | translate}} <strong>{{food.cookTime}}</strong> {{'minutes'|translate}}.
             </span>
         </div>
 
         <!-- Prikaz cene hrane, formatirano z uporabo pipe 'currency' -->
         <div class="price">
+            <span class="price-label">{{'price'|translate}}: </span>
             <span>
                 {{food.price | currency}}
             </span>
         </div>
 
         <!-- Gumb za dodajanje hrane v košarico, kliče metodo addToCart ob kliku -->
-        <button (click)="addToCart()">Add To Cart</button>
+        <button (click)="addToCart()">{{'addToCart'|translate}}</button>
     </div>
 </div>
 

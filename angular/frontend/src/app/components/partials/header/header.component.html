@@ -4,20 +4,32 @@
       <nav>
         <ul>
           <li>
-            <a routerLink="/login">Login</a>
+            <a routerLink="/login">{{'login'|translate}}</a>
           </li>
           <li class="menu-container">
             <a routerLink="/dashboard">John</a>
             <div class="menu">
-              <a routerLink="/profile">Profile</a>
-              <a routerLink="/orders">Orders</a>
-              <a>Logout</a>
+              <a routerLink="/profile">{{'profile'|translate}}</a>
+              <a routerLink="/orders">{{'orders'|translate}}</a>
+              <a>{{'logout'|translate}}</a>
             </div>
           </li>
           <li>
             <a routerLink="/cart-page">
-              Cart <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+              {{'cart'|translate}} <span *ngIf="cartQuantity">{{cartQuantity}}</span>
             </a>
+          </li>
+          <li class="menu-container">
+            <a href="#">
+                <img *ngIf="selectedLanguage.flag" [src]="selectedLanguage.flag" alt="Flag" class="flag"> <!-- Flag image -->
+                {{ selectedLanguage.name }} <!-- Display the selected language, which is 'English' by default -->
+            </a>
+            <div class="menu">
+                <!-- TUKAJ MORA BITI LINK REFRESH ==> DA FETCHA GLEDE NA JEZIK PRODUKTE!! -->
+                <a class="dropdown-item" href="" [class.selected]="selectedLanguage.name === 'Slovenščina'" (click)="selectLanguage('Slovenščina', 'assets/slovenia.png')"><img src="assets/slovenia.png" alt="Slovenian Flag" class="flag">Slovenščina</a>
+                <a class="dropdown-item" href="" [class.selected]="selectedLanguage.name === 'English'" (click)="selectLanguage('English', 'assets/britain.png')"><img src="assets/britain.png" alt="British Flag" class="flag">English</a>
+                <a class="dropdown-item" href="" [class.selected]="selectedLanguage.name === 'Deutsch'" (click)="selectLanguage('Deutsch', 'assets/germany.png')"><img src="assets/germany.png" alt="German Flag" class="flag">Deutsch</a>
+            </div>
           </li>
         </ul>
       </nav>

@@ -92,8 +92,7 @@ img{
     color: green;
 }
 
-.price::before{
-    content: "Price: ";
+.price-label{
     color: darkgrey;
 }
 

@@ -1,0 +1,22 @@
+{
+    "remove": "Remove",
+    "proceedToCheckout": "Proceed to Checkout",
+    "timeToCook": "Time to cook about",
+    "minutes": "minutes",
+    "price": "Price",
+    "addToCart": "Add To Cart",
+    "itemAddedToCart": "Item added to cart",
+    "wouldYouLikeToContinueShoppingOrGoToYourCart": "Would you like to continue shopping or go to your cart",
+    "continueShopping": "Continue Shopping",
+    "goToCart": "Go to Cart",
+    "login": "Login",
+    "profile": "Profile",
+    "orders": "Orders",
+    "logout": "Logout",
+    "cart": "Cart",
+    "cartPage": "Cart page",
+    "count": "Count",
+    "search": "Search",
+    "searchOn": "Search"
+
+}

@@ -103,13 +103,11 @@
     margin-bottom: 1.5rem;
   }
   
-  .foods-count::before {
-    content: "Count: ";
+  .foods-count-label {
     color: grey;
   }
   
-  .total-price::before {
-    content: "Price: ";
+  .total-price-label {
     color: grey;
   }
   

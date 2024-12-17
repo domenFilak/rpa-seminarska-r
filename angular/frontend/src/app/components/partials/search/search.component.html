@@ -1,6 +1,6 @@
 <div>
-    <input #s placeholder="Search Hrana-Go" 
+    <input #s placeholder="{{'searchOn'|translate}} Hrana-Go" 
     (keyup.enter)="search(s.value)" 
     [value]="searchTerm"> <!-- #s je tukaj TEMPLATE REFERENCE => pomeni, da lahko kjerkoli v TEM html-ju dostopamo do tega input-a (recimo vrednosti) -->
-    <button (click)="search(s.value)">Search</button> <!-- gumb naredi isto kot ce v inputu pritisnemo enter! -->
+    <button (click)="search(s.value)">{{'search'|translate}}</button> <!-- gumb naredi isto kot ce v inputu pritisnemo enter! -->
 </div>

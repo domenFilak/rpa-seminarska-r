@@ -3,18 +3,38 @@ import { Cart } from '../shared/models/Cart';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Food } from '../shared/models/food';
 import { CartItem } from '../shared/models/CartItem';
+import { FoodService } from './food.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService { 
   // Interna lastnost za shranjevanje trenutne košarice
-  private cart: Cart = new Cart(); 
+  private cart: Cart = new Cart();
 
   // BehaviorSubject omogoča reaktivno spremljanje sprememb v košarici
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
 
-  constructor() { }
+  constructor(private foodService: FoodService) {
+    this.initialize();
+  }
+
+  // Explicitly initialize the service (can be called in app.component.ts or elsewhere)
+  initialize(): void {
+    this.cart = this.getCartFromLocalStorage();
+    this.cartSubject.next(this.cart);
+  }
+
+  //UPORABI V KOMPONENTAH, KJER NA BRSKALNIKU PRIKAZES VSEBINO KOSARICE => MORAS PREVESTI V USTREZEN JEZIK
+  changeCartLanguage(lang: string){
+    // Iterate over each cart item
+    this.cart.items.forEach(cartItem => {
+      cartItem.food = this.foodService.getFoodById(cartItem.food.id, lang)
+    });
+
+    // Update the local storage to reflect the language change
+    this.setCartToLocalStorage();
+  }
 
   // Dodajanje hrane v košarico
   addToCart(food: Food): void {
@@ -23,7 +43,10 @@ export class CartService {
       .find(item => item.food.id === food.id);
     
     // Če izdelek že obstaja, ga ne dodaj ponovno
+
+    //TUKAJ BI TREBA UPDATE NAREDITI => ČE ŽE OBSTAJA, POVEČAJ ŠTEVILO ZA 1
     if (cartItem)
+      //changeQuantity();
       return;
 
     // Če izdelek še ni v košarici, ga dodaj kot nov element

@@ -1,4 +1,4 @@
-<app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
+<app-title title="{{'cartPage'|translate}}" margin="1.5rem 0 0 2.5rem"></app-title>
 <div class="container">
 <ul>
   <li *ngFor="let cartItem of cart.items">
@@ -28,16 +28,16 @@
     </div>
     <div>
       <button class="remove-button" (click)="removeFromCart(cartItem)">
-        Remove
+        {{'remove' | translate}}
       </button>
     </div>
   </li>
 </ul>
 <div class="checkout">
   <div>
-    <div class="foods-count">{{cart.totalCount}}</div>
-    <div class="total-price">{{cart.totalPrice|currency}}</div>
+    <div><span class="foods-count-label">{{'count'|translate}}: </span>{{cart.totalCount}}</div>
+    <div><span class="total-price-label">{{'price'|translate}}: </span>{{cart.totalPrice|currency}}</div>
   </div>
-  <a routerLink="/checkout">Proceed to Checkout</a>
+  <a routerLink="/checkout">{{'proceedToCheckout' | translate}}</a>
 </div>
 </div>
