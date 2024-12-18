@@ -2,7 +2,11 @@
     <app-tags></app-tags>
     <app-search></app-search>
 </div>
-  
+<app-not-found
+    [visible]="!foods || foods.length === 0"
+    notFoundMessage="{{'notFoundMessageHome' | translate}}!"
+    resetLinkText="{{'resetLinkTextHome' | translate}}"
+></app-not-found>
 
 <ul>
     <li *ngFor="let food of foods">

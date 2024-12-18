@@ -17,5 +17,9 @@
     "count": "Število",
     "cartPage": "Košarica",
     "search": "Iskanje",
-    "searchOn": "Išči po"
+    "searchOn": "Išči po",
+    "notFoundMessageCart": "Košarica je prazna",
+    "resetLinkTextCart": "Pojdi na domačo stran",
+    "notFoundMessageHome": "Iskana hrana ni najdena",
+    "resetLinkTextHome": "Ponastavi Iskanje"
 }

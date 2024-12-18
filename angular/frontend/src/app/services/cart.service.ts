@@ -44,13 +44,14 @@ export class CartService {
     
     // Če izdelek že obstaja, ga ne dodaj ponovno
 
-    //TUKAJ BI TREBA UPDATE NAREDITI => ČE ŽE OBSTAJA, POVEČAJ ŠTEVILO ZA 1
+    //TUKAJ BI TREBA NAREDITI UPDATE KOŠARICE => ČE ŽE OBSTAJA, POVEČAJ ŠTEVILO ZA 1    SICER PA DODAJ V KOŠARICO
     if (cartItem)
       //changeQuantity();
-      return;
-
-    // Če izdelek še ni v košarici, ga dodaj kot nov element
-    this.cart.items.push(new CartItem(food));
+      this.changeQuantity(cartItem.food.id, cartItem.quantity + 1);
+    else {
+      // Če izdelek še ni v košarici, ga dodaj kot nov element
+      this.cart.items.push(new CartItem(food));
+    }
 
     // Posodobi lokalno shrambo in BehaviorSubject
     this.setCartToLocalStorage();

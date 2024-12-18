@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NotFoundComponent } from './components/partials/not-found/not-found.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -32,7 +33,8 @@ export function HttpLoaderFactory(http: HttpClient){
     CartPageComponent,
     CartPageComponent,
     TitleComponent,
-    ConfirmationModalComponent
+    ConfirmationModalComponent,
+    NotFoundComponent
 
   ],
   imports: [

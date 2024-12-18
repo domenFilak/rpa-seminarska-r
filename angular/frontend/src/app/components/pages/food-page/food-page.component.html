@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found
+    [visible]="!food.id"
+    notFoundMessage="{{'notFoundMessageHome' | translate}}!"
+    resetLinkText="{{'resetLinkTextCart' | translate}}"
+></app-not-found>
+<div *ngIf="food.id" class="container">
     <!-- Prikaz slike hrane, uporablja property binding za dinamično polnjenje vira slike in nadomestnega besedila -->
     <img [src]="food.imageUrl" [alt]="food.name"/>
 

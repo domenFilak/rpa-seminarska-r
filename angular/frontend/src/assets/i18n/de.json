@@ -17,5 +17,9 @@
     "count": "Nummer",
     "cartPage": "Warenkorb",
     "search": "Suchen",
-    "searchOn": "Suche auf"
+    "searchOn": "Suche auf",
+    "notFoundMessageCart" : "Die Warenkorbseite ist leer",
+    "resetLinkTextCart": "Gehe zur Homepage",
+    "notFoundMessageHome": "Gesuchtes Essen nicht gefunden",
+    "resetLinkTextHome": "Suche Zurücksetzen"
 }

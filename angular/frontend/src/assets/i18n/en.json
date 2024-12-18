@@ -17,6 +17,10 @@
     "cartPage": "Cart page",
     "count": "Count",
     "search": "Search",
-    "searchOn": "Search"
+    "searchOn": "Search",
+    "notFoundMessageCart": "Cart page is empty",
+    "resetLinkTextCart": "Go To Homepage",
+    "notFoundMessageHome": "Searched food not found",
+    "resetLinkTextHome": "Reset Search"
 
 }
