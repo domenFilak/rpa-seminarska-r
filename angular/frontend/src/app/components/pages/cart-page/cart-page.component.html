@@ -42,8 +42,10 @@
 </ul>
 <div class="checkout">
   <div>
-    <div><span class="foods-count-label">{{'count'|translate}}: </span>{{cart.totalCount}}</div>
-    <div><span class="total-price-label">{{'price'|translate}}: </span>{{cart.totalPrice|currency}}</div>
+    <div><span class="foods-count-label"><b>{{'count'|translate}}: </b></span>{{cart.totalCount}}</div>
+    <div><span class="total-price-label">{{'tax' | translate}}: {{ cart.totalPrice * 0.22 | currency }}</span></div>
+    <div><span class="total-price-label">{{'priceNoTax' | translate}}: {{ (cart.totalPrice - cart.totalPrice * 0.22) | currency }}</span></div>
+    <div><span class="total-price-label"><b>{{'priceTax'|translate}}: </b></span>{{cart.totalPrice|currency}}</div>
   </div>
   <a routerLink="/checkout">{{'proceedToCheckout' | translate}}</a>
 </div>

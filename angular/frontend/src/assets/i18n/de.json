@@ -21,5 +21,8 @@
     "notFoundMessageCart" : "Die Warenkorbseite ist leer",
     "resetLinkTextCart": "Gehe zur Homepage",
     "notFoundMessageHome": "Gesuchtes Essen nicht gefunden",
-    "resetLinkTextHome": "Suche Zurücksetzen"
+    "resetLinkTextHome": "Suche Zurücksetzen",
+    "priceTax": "Preis inkl. Steuer",
+    "tax": "Steuer",
+    "priceNoTax": "Preis ohne Steuer"
 }

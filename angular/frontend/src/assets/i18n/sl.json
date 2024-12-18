@@ -21,5 +21,8 @@
     "notFoundMessageCart": "Košarica je prazna",
     "resetLinkTextCart": "Pojdi na domačo stran",
     "notFoundMessageHome": "Iskana hrana ni najdena",
-    "resetLinkTextHome": "Ponastavi Iskanje"
+    "resetLinkTextHome": "Ponastavi Iskanje",
+    "priceTax": "Cena z DDV",
+    "tax": "DDV",
+    "priceNoTax": "Cena brez DDV"
 }

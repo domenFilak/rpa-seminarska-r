@@ -21,6 +21,9 @@
     "notFoundMessageCart": "Cart page is empty",
     "resetLinkTextCart": "Go To Homepage",
     "notFoundMessageHome": "Searched food not found",
-    "resetLinkTextHome": "Reset Search"
+    "resetLinkTextHome": "Reset Search",
+    "priceTax": "Price with tax",
+    "tax": "Tax",
+    "priceNoTax": "Price without tax"
 
 }
