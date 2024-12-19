@@ -17,8 +17,11 @@ export class TagsComponent implements OnInit{
 
   ngOnInit(): void {
     this.selectedLanguageShortName = localStorage.getItem('lang') || 'sl';
-
-    this.tags = this.foodService.getAllTags(this.selectedLanguageShortName);
+  
+    this.foodService.getAllTags(this.selectedLanguageShortName).subscribe(serverTags => {
+      this.tags = serverTags;
+    });
   }
+  
 
 }

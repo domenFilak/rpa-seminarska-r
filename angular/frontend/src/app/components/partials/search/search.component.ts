@@ -1,36 +1,66 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit{
+export class SearchComponent implements OnInit {
 
   searchTerm = '';
+  searchTermSubject = new Subject<string>();
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router){
-  }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    //SearchComponent JE DEL HomeComponent ==> je prikazana v HomeComponent
-    //ZATO ima vse url-je enake kot HomeComponent
-    //ZATO potrebujemo tudi tukaj v konstruktorju activatedRoute ==> ker želimo v search baru prikazati besedo, po kateri iščemo (ta se nahaja v url-ju)
-
-    //recimo smo na url-ju na brskaliku "localhost:4200/search/pizza". Ker želimo da se beseda pizza prikaže v search baru, naredimo to logiko
     this.activatedRoute.params.subscribe((params) => {
-      if (params.searchTerm){
+      if (params.searchTerm) {
         this.searchTerm = params.searchTerm;
       }
     });
+
+    this.searchTermSubject.pipe(
+      debounceTime(500),
+      distinctUntilChanged()
+    ).subscribe((term) => {
+      this.updateSearch(term);
+    });
   }
 
-  //metoda se izvede, ko kliknemo na gumb Search v tem search baru => term je kaj uporabnik vpise
-  search(term: string): void{
-    if (term){
-      this.router.navigateByUrl('/search/'+term);
+  onSearchChange(term: string): void {
+    this.searchTermSubject.next(term);
+  }
+
+  updateSearch(term: string): void {
+    if (term) {
+      this.router.navigateByUrl(`/search/${term}`).then(() => {
+        setTimeout(() => {
+          const searchInput = document.getElementById('search-input') as HTMLInputElement;
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 0);
+      });
+    } else {
+      this.router.navigateByUrl('/').then(() => {
+        setTimeout(() => {
+          const searchInput = document.getElementById('search-input') as HTMLInputElement;
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 0);
+      });
     }
   }
 
+  search(term: string): void {
+    if (term) {
+      this.router.navigateByUrl(`/search/${term}`);
+    } else {
+      this.router.navigateByUrl('/');
+    }
+  }
 }

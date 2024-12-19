@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -12,11 +12,10 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import { TitleComponent } from './components/partials/title/title.component';
 import { ConfirmationModalComponent } from './components/partials/confirmation-modal/confirmation-modal.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NotFoundComponent } from './components/partials/not-found/not-found.component';
-
+import { HttpClient } from '@angular/common/http';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,11 +30,9 @@ export function HttpLoaderFactory(http: HttpClient){
     TagsComponent,
     FoodPageComponent,
     CartPageComponent,
-    CartPageComponent,
     TitleComponent,
     ConfirmationModalComponent,
     NotFoundComponent
-
   ],
   imports: [
     BrowserModule,
@@ -50,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient){
       }
     })
   ],
-  providers: [HttpClient],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

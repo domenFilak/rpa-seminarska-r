@@ -26,13 +26,15 @@ export class CartService {
   }
 
   //UPORABI V KOMPONENTAH, KJER NA BRSKALNIKU PRIKAZES VSEBINO KOSARICE => MORAS PREVESTI V USTREZEN JEZIK
-  changeCartLanguage(lang: string){
-    // Iterate over each cart item
+  changeCartLanguage(lang: string): void {
+    // Iteriraj skozi vsako postavko v košarici
     this.cart.items.forEach(cartItem => {
-      cartItem.food = this.foodService.getFoodById(cartItem.food.id, lang)
+      this.foodService.getFoodById(cartItem.food.id, lang).subscribe(serverFood => {
+        cartItem.food = serverFood; // Posodobi hrano z novo pridobljeno vrednostjo
+      });
     });
-
-    // Update the local storage to reflect the language change
+  
+    // Posodobi lokalno shrambo, da se odraža sprememba jezika
     this.setCartToLocalStorage();
   }
 

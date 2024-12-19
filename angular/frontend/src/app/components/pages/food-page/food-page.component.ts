@@ -30,9 +30,12 @@ export class FoodPageComponent implements OnInit {
 
     this.activatedRoute.params.subscribe((params) => {
       if (params.id) {
-        this.food = this.foodService.getFoodById(params.id, this.selectedLanguageShortName);
+        this.foodService.getFoodById(params.id, this.selectedLanguageShortName).subscribe(serverFood => {
+          this.food = serverFood;
+        });
       }
     });
+    
   }
 
   addToCart() {

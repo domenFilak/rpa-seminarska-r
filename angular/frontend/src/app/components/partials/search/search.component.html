@@ -1,6 +1,11 @@
 <div>
-    <input #s placeholder="{{'searchOn'|translate}} Hrana-Go" 
-    (keyup.enter)="search(s.value)" 
-    [value]="searchTerm"> <!-- #s je tukaj TEMPLATE REFERENCE => pomeni, da lahko kjerkoli v TEM html-ju dostopamo do tega input-a (recimo vrednosti) -->
-    <button (click)="search(s.value)">{{'search'|translate}}</button> <!-- gumb naredi isto kot ce v inputu pritisnemo enter! -->
+  <input 
+    #s 
+    placeholder="{{'searchOn' | translate}} Hrana-Go" 
+    (keyup)="onSearchChange(s.value)" 
+    [value]="searchTerm" 
+    id="search-input" 
+    autofocus />
+
+  <button (click)="search(s.value)">{{'search' | translate}}</button>
 </div>
