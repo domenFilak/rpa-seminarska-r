@@ -2,6 +2,18 @@
     <app-tags></app-tags>
     <app-search></app-search>
 </div>
+
+<!-- Dropdown for filtering -->
+<div class="filter-container">
+    <label for="filter">{{ 'filterBy' | translate }}: </label>
+    <select id="filter" [(ngModel)]="selectedFilter" (change)="applyFilter()">
+        <option value="name">{{ 'name' | translate }}</option>
+        <option value="price-asc">{{ 'priceAsc' | translate }}</option>
+        <option value="price-desc">{{ 'priceDesc' | translate }}</option>
+    </select>
+</div>
+
+
 <app-not-found
     [visible]="!foods || foods.length === 0"
     notFoundMessage="{{'notFoundMessageHome' | translate}}!"
@@ -9,7 +21,7 @@
 ></app-not-found>
 
 <ul>
-    <li *ngFor="let food of foods">
+    <li *ngFor="let food of filteredFoods">
         <a routerLink="/food/{{food.id}}">
             <img [src]="food.imageUrl" [alt]="food.name">
             <div class="content">

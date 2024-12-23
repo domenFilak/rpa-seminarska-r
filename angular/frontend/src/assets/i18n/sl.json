@@ -24,5 +24,9 @@
     "resetLinkTextHome": "Ponastavi Iskanje",
     "priceTax": "Cena z DDV",
     "tax": "DDV",
-    "priceNoTax": "Cena brez DDV"
+    "priceNoTax": "Cena brez DDV",
+    "filterBy": "Filtriraj po",
+    "name": "Naziv",
+    "priceAsc": "Cena (-/+)",
+    "priceDesc": "Cena (+/-)"
 }

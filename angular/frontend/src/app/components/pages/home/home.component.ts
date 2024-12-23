@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { FoodService } from '../../../services/food.service';
 import { Food } from '../../../shared/models/food';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -13,7 +12,9 @@ import { Food } from '../../../shared/models/food';
 export class HomeComponent implements OnInit {
 
   foods: Food[] = [];
+  filteredFoods: Food[] = [];
   selectedLanguageShortName: string = "sl";
+  selectedFilter: string = 'name'; // Default filter
 
   constructor(private foodService: FoodService, activatedRoute: ActivatedRoute) {
     this.selectedLanguageShortName = localStorage.getItem('lang') || 'sl';
@@ -31,22 +32,22 @@ export class HomeComponent implements OnInit {
 
       foodsObservable.subscribe((serverFoods) => {
         this.foods = serverFoods;
+        this.applyFilter(); // Apply initial filter
       });
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  applyFilter(): void {
+    if (this.selectedFilter === 'name') {
+      this.filteredFoods = [...this.foods].sort((a, b) => a.name.localeCompare(b.name)); // Sort by name alphabetically
+    } else if (this.selectedFilter === 'price-asc') {
+      this.filteredFoods = [...this.foods].sort((a, b) => a.price - b.price); // Sort by price in ascending order
+    } else if (this.selectedFilter === 'price-desc') {
+      this.filteredFoods = [...this.foods].sort((a, b) => b.price - a.price); // Sort by price in descending order
+    } else {
+      this.filteredFoods = [...this.foods]; // No filter applied
+    }
   }
 }
-
-
-    //KAJ SE TUKAJ DOGAJA V OZADJU
-
-    //pogledamo v app-routing.module.ts in lahko vidimo, da imamo na HomeComponent vezana 2 url-ja
-    //VSAKIČ, ko se HomeComponent generira (prikaže) se ta konstruktor izvede!!
-
-    //PRVI url je prazen, path="", kar pomeni, ko bo v brskalniku localhost:4200 bo pokazalo HomeComponent ==> activatedRoute pa ne bo imelo nobenih parametrov!
-
-    //DRUGI url ni prazen, path="search/:searchTerm", kar pomeni, ko bo v brskalniku recimo localhost:4200/search/pizza => activatedRoute bo takrat imel parameter searchTerm in bo izvedel ustrezno logiko odzgoraj!!
-    
-

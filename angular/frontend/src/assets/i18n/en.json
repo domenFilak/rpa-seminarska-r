@@ -24,6 +24,10 @@
     "resetLinkTextHome": "Reset Search",
     "priceTax": "Price with tax",
     "tax": "Tax",
-    "priceNoTax": "Price without tax"
+    "priceNoTax": "Price without tax",
+    "filterBy": "Filter by",
+    "name": "Name",
+    "priceAsc": "Price (-/+)",
+    "priceDesc": "Price (+/-)"
 
 }

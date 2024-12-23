@@ -24,5 +24,9 @@
     "resetLinkTextHome": "Suche Zurücksetzen",
     "priceTax": "Preis inkl. Steuer",
     "tax": "Steuer",
-    "priceNoTax": "Preis ohne Steuer"
+    "priceNoTax": "Preis ohne Steuer",
+    "filterBy": "Filtern nach",
+    "name": "Name",
+    "priceAsc": "Preis (-/+)",
+    "priceDesc": "Preis (+/-)"
 }
