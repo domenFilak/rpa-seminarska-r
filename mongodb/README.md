@@ -2,7 +2,7 @@
 
 Podatkovna baza je ustvarjena s pomočjo MongoDB verzija 8.0.3
 
-## Kako prekopirati bazo v lokalno okolje
+## Kako bazo postaviti v lokalnem okolju
 
 ### 1. Korak
 	- MongoDB Command Line Database Tools Download ==> MSI installer   https://www.mongodb.com/try/download/bi-connector

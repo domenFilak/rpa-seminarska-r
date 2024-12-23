@@ -4,7 +4,7 @@ Ta projekt je bil generiran s pomočjo: [Angular CLI](https://github.com/angular
 
 ## Development strežnik
 
-Zaženi ukaz `ng serve` za development strežnik. V poljubnme brskalniku navigiraj na: `http://localhost:4200/`. Aplikacija se bo samodejno znova naložila, če spremenite kateri koli del izvorne datoteke.
+Zaženi ukaz `ng serve` za development strežnik. V poljubnem brskalniku navigiraj na: `http://localhost:4200/`. Aplikacija se bo samodejno znova naložila, če spremenite kateri koli del izvorne datoteke.
 
 ## Izgradnja
 

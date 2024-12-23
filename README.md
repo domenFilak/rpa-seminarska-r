@@ -29,15 +29,19 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
 ## Zaslonski posnetki
 Trenutno stanje:
 
+- Seznam izdelkov
 - Iskanje po nazivu
 - Iskanje po kategorijah
+- Možnost filtriranja po znamki, ceni
+- Povezava do podrobnih informacij o izdelku
+- Prikaz izdelkov v košarici, skupna cena, davki
+- Uporabnik lahko izbere jezik aplikacije (označeno z zastavo in imenom jezika).
+
+
 
 <img src="trenutno.png" alt="Zaslonski posnetek aplikacije" width="600">
+<img src="kosarica.png" alt="Zaslonski posnetek aplikacije-kosarica" width="600">
 
-- Prikaz informacij o izdelku
-- Možnost dodajanja v košarico ob kliku na "Add to cart"
-
-<img src="info.png" alt="Zaslonski posnetek aplikacije info hrane" width="600">
 
 ## Namestitev
 Za namestitev in zagon projekta sledite spodnjim korakom:
