@@ -11,11 +11,12 @@ import { FoodPageComponent } from './components/pages/food-page/food-page.compon
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
 import { ConfirmationModalComponent } from './components/partials/confirmation-modal/confirmation-modal.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NotFoundComponent } from './components/partials/not-found/not-found.component';
 import { HttpClient } from '@angular/common/http';
+import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -33,13 +34,15 @@ export function HttpLoaderFactory(http: HttpClient){
     CartPageComponent,
     TitleComponent,
     ConfirmationModalComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

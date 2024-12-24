@@ -28,5 +28,9 @@
     "filterBy": "Filtern nach",
     "name": "Name",
     "priceAsc": "Preis (-/+)",
-    "priceDesc": "Preis (+/-)"
+    "priceDesc": "Preis (+/-)",
+    "email": "Email",
+    "password": "Passwort",
+    "shouldNotBeEmpty": "Darf nicht leer sein",
+    "emailIsNotCorrect": "Die Email ist nicht richtig formatiert"
 }

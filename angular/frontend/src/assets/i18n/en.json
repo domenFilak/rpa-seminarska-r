@@ -28,6 +28,10 @@
     "filterBy": "Filter by",
     "name": "Name",
     "priceAsc": "Price (-/+)",
-    "priceDesc": "Price (+/-)"
+    "priceDesc": "Price (+/-)",
+    "email": "Email",
+    "password": "Password",
+    "shouldNotBeEmpty": "Should not be empty",
+    "emailIsNotCorrect": "Email is not correct"
 
 }

@@ -28,5 +28,9 @@
     "filterBy": "Filtriraj po",
     "name": "Naziv",
     "priceAsc": "Cena (-/+)",
-    "priceDesc": "Cena (+/-)"
+    "priceDesc": "Cena (+/-)",
+    "email": "Email",
+    "password": "Geslo",
+    "shouldNotBeEmpty": "Nesme biti prazno",
+    "emailIsNotCorrect": "Email ni pravilno formuliran"
 }
