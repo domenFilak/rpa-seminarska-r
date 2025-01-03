@@ -32,5 +32,13 @@
     "email": "Email",
     "password": "Passwort",
     "shouldNotBeEmpty": "Darf nicht leer sein",
-    "emailIsNotCorrect": "Die Email ist nicht richtig formatiert"
+    "emailIsNotCorrect": "Die Email ist nicht richtig formatiert",
+    "stockByBranch": "Aktie",
+    "branch": "Zweigstelle",
+    "branches" : "Zweige",
+    "street": "Straße",
+    "postalCode": "Postleitzahl",
+    "city": "Stadt",
+    "phone" : "Telefonnummer"
+
 }

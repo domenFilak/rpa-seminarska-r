@@ -3,6 +3,9 @@
       <a routerLink="/" class="logo">Hrana-Go!</a>
       <nav>
         <ul>
+          <li>
+            <a routerLink="/branches">{{'branches'|translate}}</a>
+          </li>
           <li *ngIf="!isAuth">
             <a routerLink="/login">{{'login'|translate}}</a>
           </li>

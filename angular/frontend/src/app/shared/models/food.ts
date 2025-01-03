@@ -8,4 +8,5 @@ export class Food{
     origins!: string[];
     cookTime!: string;
     lang!: string;
+    branches?: { branch: string, stock: number }[];
 }

@@ -15,6 +15,46 @@ app.use(cors({
 }));
 
 
+
+interface Branch {
+  branch: string;
+  stock: number;
+}
+
+interface Food {
+  id: string;
+  name: string;
+  cookTime: string;
+  price: number;
+  favourite: boolean;
+  origins: string[];
+  imageUrl: string;
+  tags: string[];
+  lang: string;
+  branches: Branch[]; 
+}
+
+
+app.get("/api/foods/:foodId/stock", (req, res) => {
+  const foodId = req.params.foodId;
+  const branch = req.query.branch as string;
+
+  const food = sample_foods.find((food: Food) => food.id === foodId);
+
+  if (food) {
+    const branchData = food.branches.find((b: Branch) => b.branch === branch);
+    
+    if (branchData) {
+      res.send({ stock: branchData.stock });
+    } else {
+      res.status(404).send({ message: "Branch not found" });
+    }
+  } else {
+    res.status(404).send({ message: "Food not found" });
+  }
+});
+
+
 app.get("/api/foods", (req, res) => {
   const lang = req.query.lang;
   if (lang) {

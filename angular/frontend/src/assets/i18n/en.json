@@ -32,6 +32,17 @@
     "email": "Email",
     "password": "Password",
     "shouldNotBeEmpty": "Should not be empty",
-    "emailIsNotCorrect": "Email is not correct"
+    "emailIsNotCorrect": "Email is not correct",
+    "stockByBranch": "Stock",
+    "branch": "Branch",
+    "branches" : "Branches",
+    "street": "Street",
+    "postalCode": "Postal Code",
+    "city": "City",
+    "phone" : "Phone"
+
+      
+
+
 
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FoodService } from '../../../services/food.service';
-import { Food } from '../../../shared/models/food';
 import { CartService } from '../../../services/cart.service';
+import { Food } from '../../../shared/models/food';
 
 @Component({
   selector: 'app-food-page',
@@ -11,9 +11,9 @@ import { CartService } from '../../../services/cart.service';
 })
 export class FoodPageComponent implements OnInit {
   food!: Food;
-  showModal = false; 
-
+  showModal = false;
   selectedLanguageShortName: string = "sl";
+  isBranchStockVisible: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,11 +23,11 @@ export class FoodPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-
     this.selectedLanguageShortName = localStorage.getItem('lang') || 'sl';
 
-    this.cartService.initialize(); //nastavi iz localstorage kosarico
+    this.cartService.initialize(); // Initialize the cart from local storage
 
+    // Fetch food data by ID
     this.activatedRoute.params.subscribe((params) => {
       if (params.id) {
         this.foodService.getFoodById(params.id, this.selectedLanguageShortName).subscribe(serverFood => {
@@ -35,7 +35,6 @@ export class FoodPageComponent implements OnInit {
         });
       }
     });
-    
   }
 
   addToCart() {
@@ -43,7 +42,6 @@ export class FoodPageComponent implements OnInit {
     this.showModal = true;  // Show the modal
   }
 
-  // Close the modal and continue shopping
   closeModal(isShopping: boolean) {
     this.showModal = false;
     if (isShopping) {
@@ -51,8 +49,12 @@ export class FoodPageComponent implements OnInit {
     }
   }
 
-  // Navigate to cart page when user chooses to go to the cart
   goToCart() {
     this.router.navigateByUrl('/cart-page');
   }
+
+  toggleBranchStock() {
+    this.isBranchStockVisible = !this.isBranchStockVisible;
+  }
+
 }

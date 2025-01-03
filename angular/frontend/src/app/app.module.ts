@@ -19,6 +19,7 @@ import { HttpClient } from '@angular/common/http';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BranchesComponent } from './components/pages/branches/branches.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -37,7 +38,9 @@ export function HttpLoaderFactory(http: HttpClient){
     TitleComponent,
     ConfirmationModalComponent,
     NotFoundComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    BranchesComponent
+    
   ],
   imports: [
     BrowserModule,

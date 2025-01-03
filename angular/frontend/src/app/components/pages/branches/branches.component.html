@@ -1,0 +1,19 @@
+<div class="branches-container">
+    <h2>{{'branches' | translate}}</h2>
+  
+    <!-- Flexbox container za kartice -->
+    <div class="branches-cards">
+      <div *ngFor="let branch of branches" class="branch-card">
+        <img [src]="branch.imageUrl" alt="Slika {{branch.name}}" />
+        <h3>{{'branch' | translate}}: {{branch.name}}</h3>
+        <p><strong>{{'street' | translate}}:</strong> 
+          <a [href]="branch.mapUrl" target="_blank"> {{branch.address}}</a>
+        </p>
+        <p><strong>{{'postalCode' | translate}}:</strong> {{branch.postCode}}</p>
+        <p><strong>{{'city' | translate}}:</strong> {{branch.city}}</p>
+        <p><strong>{{'phone' | translate}}:</strong> {{branch.phone}}</p>
+        <p><strong>{{'email' | translate}}:</strong> <a href="mailto:{{branch.email}}"> {{branch.email}}</a></p>
+      </div>
+    </div>
+  </div>
+  

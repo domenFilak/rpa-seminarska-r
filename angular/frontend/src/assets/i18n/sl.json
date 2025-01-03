@@ -32,5 +32,13 @@
     "email": "Email",
     "password": "Geslo",
     "shouldNotBeEmpty": "Nesme biti prazno",
-    "emailIsNotCorrect": "Email ni pravilno formuliran"
+    "emailIsNotCorrect": "Email ni pravilno formuliran",
+    "stockByBranch": "Zaloga po poslovalnicah",
+    "branch": "Poslovalnica",
+    "branches" : "Poslovalnice",
+    "street" : "Ulica",
+    "postalCode" : "Poštna številka",
+    "city" : "Mesto",
+    "phone" : "Telefonska številka"
+
 }

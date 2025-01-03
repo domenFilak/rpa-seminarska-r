@@ -1,58 +1,55 @@
 <app-not-found
     [visible]="!food.id"
     notFoundMessage="{{'notFoundMessageHome' | translate}}!"
-    resetLinkText="{{'resetLinkTextCart' | translate}}"
-></app-not-found>
+    resetLinkText="{{'resetLinkTextCart' | translate}}">
+</app-not-found>
+
 <div *ngIf="food.id" class="container">
-    <!-- Prikaz slike hrane, uporablja property binding za dinamično polnjenje vira slike in nadomestnega besedila -->
     <img [src]="food.imageUrl" [alt]="food.name"/>
 
     <div class="details">
         <div class="header">
-            <!-- Ime hrane, prikazano s pomočjo interpolacije -->
-            <span class="name">
-                {{food.name}}
-            </span>
+            <span class="name">{{food.name}}</span>
             <span class="favourite {{food.favourite ? '' : 'not'}}">❤</span>
         </div>
-        <div class="rating">
-            <!-- Star rating can go here if needed -->
-        </div>
 
-        <!-- Prikaz izvorov hrane, uporablja *ngFor za iteracijo čez seznam -->
+
         <div class="origins">
-            <span *ngFor="let origin of food.origins">
-                {{origin}}
-            </span>
+            <span *ngFor="let origin of food.origins">{{origin}}</span>
         </div>
 
-        <!-- Prikaz oznak hrane, uporablja *ngFor in routerLink za navigacijo -->
         <div class="tags">
-            <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
-                {{tag}}
-            </a>
+            <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">{{tag}}</a>
         </div>
 
         <div class="cook-time">
-            <span>
-                {{'timeToCook' | translate}} <strong>{{food.cookTime}}</strong> {{'minutes'|translate}}.
-            </span>
+            <span>{{'timeToCook' | translate}} <strong>{{food.cookTime}}</strong> {{'minutes'|translate}}.</span>
         </div>
 
-        <!-- Prikaz cene hrane, formatirano z uporabo pipe 'currency' -->
         <div class="price">
             <span class="price-label">{{'price'|translate}}: </span>
-            <span>
-                {{food.price | currency}}
-            </span>
+            <span>{{food.price | currency}}</span>
         </div>
 
-        <!-- Gumb za dodajanje hrane v košarico, kliče metodo addToCart ob kliku -->
+        <!-- Zaloga po poslovalnicah (Dropdown) -->
+        <div class="branches-stock">
+            <!-- Gumb za odpiranje/zapiranje dropdown menija -->
+            <button (click)="toggleBranchStock()" id="branch-stock-toggle" class="toggle-button">
+                {{ 'stockByBranch' | translate }}
+            </button>
+            
+            <!-- Dodan je dropdown meni za prikaz zaloge -->
+            <div *ngIf="isBranchStockVisible" class="branch-stock-dropdown">
+                <div *ngFor="let branch of food.branches" class="branch-stock">
+                    <span>{{branch.branch}}: {{branch.stock}}</span>
+                </div>
+            </div>
+        </div>
+
         <button (click)="addToCart()">{{'addToCart'|translate}}</button>
     </div>
 </div>
 
-<!-- Modal Component to show when item is added to the cart -->
 <app-confirmation-modal 
   *ngIf="showModal" 
   (closeModal)="closeModal($event)" 
