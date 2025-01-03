@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../../services/cart.service';
 import { TranslateService } from '@ngx-translate/core';
+import { UserService } from '../../../services/user.service';
+import { User } from '../../../shared/models/User';
 
 
 @Component({
@@ -20,7 +22,9 @@ export class HeaderComponent implements OnInit {
   selectedLanguageShortName: string = "sl";
 
   cartQuantity=0;
-  constructor(private cartService:CartService, private translateService: TranslateService) {
+  user!: User;
+
+  constructor(private cartService:CartService, private translateService: TranslateService, private userService: UserService) {
   }
 
   ngOnInit(): void {
@@ -42,6 +46,10 @@ export class HeaderComponent implements OnInit {
 
     this.cartService.getCartObservable().subscribe((newCart) => {
       this.cartQuantity = newCart.totalCount;
+    });
+
+    this.userService.userObservable.subscribe((newUser) => {
+      this.user = newUser;
     });
 
   }
@@ -67,6 +75,14 @@ export class HeaderComponent implements OnInit {
 
     this.translateService.use(this.selectedLanguageShortName);
 
+  }
+
+  logout(){
+    this.userService.logout();
+  }
+
+  get isAuth(){
+    return this.user.token;
   }
 
 }
