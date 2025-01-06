@@ -36,6 +36,11 @@ Trenutno stanje:
 - Povezava do podrobnih informacij o izdelku
 - Prikaz izdelkov v košarici, skupna cena, davki
 - Uporabnik lahko izbere jezik aplikacije (označeno z zastavo in imenom jezika).
+- Filtriranje izdelkov po nazivu in ceni (+/-), (-/+)
+- Dodani poslovalnici
+- Dodana zaloga artiklov po vsaki poslovalnici
+
+
 
 
 
