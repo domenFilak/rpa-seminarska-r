@@ -300,8 +300,6 @@ export const sample_tags:any[] = [ //so naše KATEGORIJE!!
   { name: 'Suppe', count: 1, lang: "de" },
   { name: 'Dessert', count: 0, lang: "de"},
 
-
-
 ];
 
 
