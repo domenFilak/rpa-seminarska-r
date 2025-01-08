@@ -2,6 +2,10 @@
   box-sizing: border-box;  /* Ensure padding and border are included in element's width */
 }
 
+h1{
+  color: #616161
+}
+
 .branches-container {
   padding: 1rem;
   text-align: center;

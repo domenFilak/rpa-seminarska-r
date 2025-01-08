@@ -33,25 +33,25 @@ export class UserService {
 
           if (lang === 'sl'){
             this.toastrService.success(
-              'Dobrodošli v Hrana-Go! ' + user.name,
+              'Dobrodošli v Hrana-Go!, ' + user.name,
               'Prijava uspešna'
             );
           }
           else if (lang === 'en'){
             this.toastrService.success(
-              'Welcome to Hrana-Go! ' + user.name,
+              'Welcome to Hrana-Go!, ' + user.name,
               'Login Successful'
             );
           }
           else if (lang === 'de'){
             this.toastrService.success(
-              'Willkommen bei Hrana-Go! ' + user.name,
+              'Willkommen bei Hrana-Go!, ' + user.name,
               'Anmeldung erfolgreich'
             );
           }
           else {
             this.toastrService.success(
-              'Welcome to Hrana-Go! ' + user.name,
+              'Welcome to Hrana-Go!, ' + user.name,
               'Login Successful'
             );
           }
@@ -60,16 +60,16 @@ export class UserService {
           const lang = localStorage.getItem('lang') || 'sl';
 
           if (lang === 'sl'){
-            this.toastrService.error(errorResponse.error, 'Prijava neuspešna');
+            this.toastrService.error("Uporabniško ime ali geslo ni pravilno.", 'Prijava neuspešna');
           }
           else if (lang === 'en'){
-            this.toastrService.error(errorResponse.error, 'Login Failed');
+            this.toastrService.error("Username or password isn't correct.", 'Login Failed');
           }
           else if (lang === 'de'){
-            this.toastrService.error(errorResponse.error, 'Fehler bei der Anmeldung');
+            this.toastrService.error("Benutzername oder Passwort sind falsch.", 'Fehler bei der Anmeldung');
           }
           else {
-            this.toastrService.error(errorResponse.error, 'Login Failed');
+            this.toastrService.error("Username or password isn't correct.", 'Login Failed');
           }
         }
       })
