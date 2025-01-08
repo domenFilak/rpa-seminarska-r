@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="content">
+    <app-title title="{{'orderForm' | translate}}" fontSize="1.6rem"></app-title>
+    <form [formGroup]="checkoutForm">
+      <text-input [control]="fc.name" label="{{'name' | translate}}"></text-input>
+      <text-input [control]="fc.address" label="{{'address' | translate}}"></text-input>
+    </form>
+    <order-items-list [order]="order"></order-items-list>
+    <div class="buttons-container">
+      <div class="buttons">
+        <button (click)="createOrder()">
+          {{'goToPayment' | translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

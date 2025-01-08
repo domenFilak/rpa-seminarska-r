@@ -27,10 +27,12 @@
     "priceNoTax": "Price without tax",
     "filterBy": "Filter by",
     "name": "Name",
+    "nameSurname" : "Full name",
     "priceAsc": "Price (-/+)",
     "priceDesc": "Price (+/-)",
     "email": "Email",
     "password": "Password",
+    "confirmPassword": "Confirm Password",
     "shouldNotBeEmpty": "Should not be empty",
     "emailIsNotCorrect": "Email is not correct",
     "stockByBranch": "Stock",
@@ -39,7 +41,18 @@
     "street": "Street",
     "postalCode": "Postal Code",
     "city": "City",
-    "phone" : "Phone"
+    "phone" : "Phone",
+    "address" : "Address" ,
+    "register" : "Register",
+    "registerHere" : "Register here",
+    "alreadyAUser" : "Already a user",
+    "loginHere" : "Bewerben Sie sich hier",
+    "newUser" : "New user",
+    "goToPayment" : "Go to payment",
+    "orderItems" : "Quantity",
+    "total" : "Full price",
+    "orderForm" : "Order Form"
+
 
       
 

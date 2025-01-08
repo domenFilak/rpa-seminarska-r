@@ -20,6 +20,12 @@
             
         
             <default-button text="{{'login'|translate}}"></default-button>
+                <div class="register">
+                    {{'newUser' | translate}}? &nbsp;
+                <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
+                    {{'registerHere' | translate}}
+                </a>
+                </div>
         </form>
     </div>
 </div>

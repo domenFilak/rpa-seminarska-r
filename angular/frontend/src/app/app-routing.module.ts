@@ -5,6 +5,8 @@ import { FoodPageComponent } from './components/pages/food-page/food-page.compon
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { BranchesComponent } from './components/pages/branches/branches.component';
+import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 
 const routes: Routes = [
   //se gleda hierarhija pathov!!!
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path: 'food/:id', component:FoodPageComponent},
   {path: 'cart-page', component:CartPageComponent},
   {path: 'login', component:LoginPageComponent},
+  {path: 'register', component:RegisterPageComponent},
   {path: 'branches', component:BranchesComponent},
+  {path: 'checkout', component:CheckoutPageComponent},
 
 ];
 

@@ -27,10 +27,12 @@
     "priceNoTax": "Cena brez DDV",
     "filterBy": "Filtriraj po",
     "name": "Naziv",
+    "nameSurname": "Polno ime",
     "priceAsc": "Cena (-/+)",
     "priceDesc": "Cena (+/-)",
     "email": "Email",
     "password": "Geslo",
+    "confirmPassword": "Potrdi geslo",
     "shouldNotBeEmpty": "Nesme biti prazno",
     "emailIsNotCorrect": "Email ni pravilno formuliran",
     "stockByBranch": "Zaloga po poslovalnicah",
@@ -39,6 +41,17 @@
     "street" : "Ulica",
     "postalCode" : "Poštna številka",
     "city" : "Mesto",
-    "phone" : "Telefonska številka"
+    "phone" : "Telefonska številka",
+    "address" : "Naslov",
+    "register" : "Registriraj se",
+    "registerHere" : "Registriraj se tukaj",
+    "alreadyAUser" : "Ste že uporabnik",
+    "loginHere" : "Prijavi se tukaj",
+    "newUser" : "Nov uporabnik",
+    "goToPayment" : "Naprej na plačilo",
+    "orderItems" : "Artikli na naročilu",
+    "total" : "Celotna cena",
+    "orderForm" : "Naročilo"
+    
 
 }

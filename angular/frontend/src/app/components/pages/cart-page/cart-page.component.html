@@ -31,7 +31,7 @@
       <button (click)="changeQuantity(cartItem, cartItem.quantity + 1)" [disabled]="cartItem.quantity >= 10">+</button>
     </div>
     <div>
-      {{cartItem.price | currency}}
+      {{cartItem.price}}€
     </div>
     <div>
       <button class="remove-button" (click)="removeFromCart(cartItem)">
@@ -43,9 +43,9 @@
 <div class="checkout">
   <div>
     <div><span class="foods-count-label"><b>{{'count'|translate}}: </b></span>{{cart.totalCount}}</div>
-    <div><span class="total-price-label">{{'tax' | translate}}: {{ cart.totalPrice * 0.22 | currency }}</span></div>
-    <div><span class="total-price-label">{{'priceNoTax' | translate}}: {{ (cart.totalPrice - cart.totalPrice * 0.22) | currency }}</span></div>
-    <div><span class="total-price-label"><b>{{'priceTax'|translate}}: </b></span>{{cart.totalPrice|currency}}</div>
+    <div><span class="total-price-label">{{'tax' | translate}}: {{ cart.totalPrice * 0.22}}€</span></div>
+    <div><span class="total-price-label">{{'priceNoTax' | translate}}: {{ (cart.totalPrice - cart.totalPrice * 0.22)}}€</span></div>
+    <div><span class="total-price-label"><b>{{'priceTax'|translate}}: </b></span>{{cart.totalPrice}}€</div>
   </div>
   <a routerLink="/checkout">{{'proceedToCheckout' | translate}}</a>
 </div>

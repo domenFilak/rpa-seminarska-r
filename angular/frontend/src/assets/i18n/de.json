@@ -27,10 +27,12 @@
     "priceNoTax": "Preis ohne Steuer",
     "filterBy": "Filtern nach",
     "name": "Name",
+    "nameSurname" : "Vollständiger Name",
     "priceAsc": "Preis (-/+)",
     "priceDesc": "Preis (+/-)",
     "email": "Email",
     "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
     "shouldNotBeEmpty": "Darf nicht leer sein",
     "emailIsNotCorrect": "Die Email ist nicht richtig formatiert",
     "stockByBranch": "Aktie",
@@ -39,6 +41,18 @@
     "street": "Straße",
     "postalCode": "Postleitzahl",
     "city": "Stadt",
-    "phone" : "Telefonnummer"
+    "phone" : "Telefonnummer",
+    "address" : "Adresse",
+    "register" : "Registrieren",
+    "registerHere" : "Registrieren Sie sich hier",
+    "alreadyAUser" : "Bereits ein benutzer",
+    "loginHere" : "Bewerben Sie sich hier",
+    "newUser" : "Neuer benutzer",
+    "goToPayment" : "Fahren Sie mit der Zahlung fort",
+    "orderItems" : "Menge",
+    "total" : "Voller preis",
+    "orderForm" : "Bestellformular"
+
+
 
 }

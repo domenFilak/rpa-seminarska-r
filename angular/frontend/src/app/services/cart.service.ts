@@ -100,6 +100,11 @@ export class CartService {
     return this.cartSubject.asObservable();
   }
 
+  getCart(): Cart{
+    return this.cartSubject.value;
+  }
+
+
   // Posodobi košarico v lokalni shrambi in BehaviorSubject
   private setCartToLocalStorage(): void {
     // Izračunaj skupno ceno in število izdelkov
