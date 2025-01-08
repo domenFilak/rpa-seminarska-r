@@ -20,6 +20,10 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BranchesComponent } from './components/pages/branches/branches.component';
+import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
+import { TextInputComponent } from './components/partials/text-input/text-input.component';
+import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -39,7 +43,11 @@ export function HttpLoaderFactory(http: HttpClient){
     ConfirmationModalComponent,
     NotFoundComponent,
     LoginPageComponent,
-    BranchesComponent
+    BranchesComponent,
+    InputContainerComponent,
+    InputValidationComponent,
+    TextInputComponent,
+    DefaultButtonComponent
     
   ],
   imports: [
