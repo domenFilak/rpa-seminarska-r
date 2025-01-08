@@ -51,7 +51,11 @@
     "goToPayment" : "Go to payment",
     "orderItems" : "Quantity",
     "total" : "Full price",
-    "orderForm" : "Order Form"
+    "orderForm" : "Order Form",
+    "forgotPassword" : "Forgot password",
+    "resetPassword" : "Reset it here",
+    "reset" : "Reset",
+    "resetForm" : "Reset password form"
 
 
       

@@ -51,7 +51,11 @@
     "goToPayment" : "Naprej na plačilo",
     "orderItems" : "Artikli na naročilu",
     "total" : "Celotna cena",
-    "orderForm" : "Naročilo"
+    "orderForm" : "Naročilo",
+    "forgotPassword" : "Pozabljeno geslo",
+    "resetPassword" : "Ponastavi ga tukaj",
+    "reset" : "Resetiraj",
+    "resetForm" : "Forma za ponastavitev gesla"
     
 
 }

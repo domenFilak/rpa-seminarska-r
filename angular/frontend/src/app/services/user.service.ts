@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, of, tap } from 'rxjs';
 import { User } from '../shared/models/User';
 import { IUserLogin } from '../shared/interfaces/IUserLogin';
 import { HttpClient } from '@angular/common/http';
@@ -140,6 +140,24 @@ export class UserService {
     )
   }
 
+  requestPasswordReset(email: string): Observable<string> {
+    const newPassword = 'newRandomPassword123'; // Generate a new random password or simulate it
+  
+    return of(newPassword).pipe(
+      tap(() => {
+        const lang = localStorage.getItem('lang') || 'sl';
+        if (lang === 'sl') {
+          this.toastrService.success('Geslo uspešno ponastavljeno');
+        } else if (lang === 'en') {
+          this.toastrService.success('Password successfully reset');
+        } else if (lang === 'de') {
+          this.toastrService.success('Passwort erfolgreich zurückgesetzt');
+        } else {
+          this.toastrService.success('Password successfully reset');
+        }
+      })
+    );
+  }
 
   logout(){
     this.userSubject.next(new User());

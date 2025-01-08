@@ -4,7 +4,6 @@
 
         <form [formGroup]="loginForm" (ngSubmit)="submit()">
             
-
             <text-input
             [control]="fc.email"
             [showErrorsWhen]="isSubmitted"
@@ -17,15 +16,24 @@
             type="password"
             label="{{'password'|translate}}"></text-input>
             
-            
-        
-            <default-button text="{{'login'|translate}}"></default-button>
-                <div class="register">
-                    {{'newUser' | translate}}? &nbsp;
+            <default-button text="{{'login'| translate}}"></default-button>
+        </form>
+
+        <!-- Links below the form -->
+        <div class="links-container">
+            <div class="register">
+                {{'newUser' | translate}}? &nbsp;
                 <a routerLink="/register" [queryParams]="{returnUrl : returnUrl}">
                     {{'registerHere' | translate}}
                 </a>
-                </div>
-        </form>
+            </div>
+
+            <div class="forgot-password">
+                {{'forgotPassword' | translate}}?
+                <a routerLink="/forgot-password" [queryParams]="{returnUrl : returnUrl}">
+                    {{"resetPassword" | translate}}
+                </a>
+            </div>
+        </div>
     </div>
 </div>

@@ -7,6 +7,7 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { BranchesComponent } from './components/pages/branches/branches.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
 
 const routes: Routes = [
   //se gleda hierarhija pathov!!!
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'register', component:RegisterPageComponent},
   {path: 'branches', component:BranchesComponent},
   {path: 'checkout', component:CheckoutPageComponent},
+  {path: 'forgot-password', component:ResetPasswordComponent},
 
 ];
 

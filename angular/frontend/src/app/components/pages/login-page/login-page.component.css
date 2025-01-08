@@ -8,7 +8,6 @@
 
 .details {
     width: 28rem;
-
 }
 
 form {
@@ -17,8 +16,30 @@ form {
     justify-content: center;
 }
 
-.register{
+.register {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
+.links-container {
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    flex-direction: column;  /* Stack the links vertically */
+    align-items: center; /* Center the links vertically */
+    margin-top: 20px;  /* Add some space between the form and the links */
+}
+
+.register, .forgot-password {
+    margin: 5px 0;  /* Optional: Adds some space between the links */
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+}
+
+a:hover {
+    text-decoration: underline; /* Hover effect */
+}

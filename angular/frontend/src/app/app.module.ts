@@ -27,6 +27,7 @@ import { DefaultButtonComponent } from './components/partials/default-button/def
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
+import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -53,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient){
     DefaultButtonComponent,
     RegisterPageComponent,
     CheckoutPageComponent,
-    OrderItemsListComponent
+    OrderItemsListComponent,
+    ResetPasswordComponent
     
   ],
   imports: [
