@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -28,6 +28,8 @@ import { RegisterPageComponent } from './components/pages/register-page/register
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
+import { AuthInterceptor } from './auth/auth.interceptor';
+import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -55,7 +57,8 @@ export function HttpLoaderFactory(http: HttpClient){
     RegisterPageComponent,
     CheckoutPageComponent,
     OrderItemsListComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    PaymentPageComponent
     
   ],
   imports: [
@@ -78,7 +81,10 @@ export function HttpLoaderFactory(http: HttpClient){
       }
     })
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true },
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
