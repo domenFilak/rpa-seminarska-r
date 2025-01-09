@@ -48,45 +48,93 @@ export class InputValidationComponent implements OnInit, OnChanges{
     const lang = localStorage.getItem('lang') || 'sl';
 
     for (const key in errors) {
+      console.log(key)
+    }
+
+    for (const key in errors) {
       if (errors.hasOwnProperty(key)) {
         if (key === 'required') {
           if (lang === 'en'){
-            this.errorMessages.push('This field is required.');
+            this.errorMessages.push('This field is required');
           }
           else if (lang === 'de'){
-            this.errorMessages.push('Dieses Feld ist erforderlich.');
+            this.errorMessages.push('Dieses Feld ist erforderlich');
           }
           else if (lang === 'sl'){
-            this.errorMessages.push('To polje je obvezno.');
+            this.errorMessages.push('To polje je obvezno');
           }
           else {
-            this.errorMessages.push('This field is required.');
+            this.errorMessages.push('This field is required');
           }
         } else if (key === 'email') {
           if (lang === 'en'){
-            this.errorMessages.push('Invalid email address.');
+            this.errorMessages.push('Invalid email address');
           }
           else if (lang === 'de'){
-            this.errorMessages.push('Ungültige email Adresse.');
+            this.errorMessages.push('Ungültige email Adresse');
           }
           else if (lang === 'sl'){
-            this.errorMessages.push('Neveljaven email naslov.');
+            this.errorMessages.push('Neveljaven email naslov');
           }
           else {
-            this.errorMessages.push('Invalid email address.');
+            this.errorMessages.push('Invalid email address');
           }
-        } else {
+        } else if (key === 'minlength') {
+          if (errors[key]?.requiredLength === 5) {
+            if (lang === 'en'){
+              this.errorMessages.push('Minimum length is 5 characters');
+            }
+            else if (lang === 'de'){
+              this.errorMessages.push('Die Mindestlänge beträgt 5 Zeichen');
+            }
+            else if (lang === 'sl'){
+              this.errorMessages.push('Minimalna dolžina je 5 znakov');
+            }
+            else {
+              this.errorMessages.push('Minimum length is 5 characters');
+            }
+          } else if (errors[key]?.requiredLength === 10) {
+            if (lang === 'en'){
+              this.errorMessages.push('Minimum length is 10 characters');
+            }
+            else if (lang === 'de'){
+              this.errorMessages.push('Die Mindestlänge beträgt 10 Zeichen');
+            }
+            else if (lang === 'sl'){
+              this.errorMessages.push('Minimalna dolžina je 10 znakov');
+            }
+            else {
+              this.errorMessages.push('Minimum length is 10 characters');
+            }
+          }
+        }
+        // Handle custom validator for password confirmation
+        else if (key === 'notMatch') {
+          if (lang === 'en') {
+            this.errorMessages.push('Passwords do not match');
+          }
+          else if (lang === 'de') {
+            this.errorMessages.push('Passwörter stimmen nicht überein');
+          }
+          else if (lang === 'sl') {
+            this.errorMessages.push('Gesli se ne ujemata');
+          }
+          else {
+            this.errorMessages.push('Passwords do not match');
+          }
+        }
+        else {
           if (lang === 'en'){
-            this.errorMessages.push('Unknown validation error.');
+            this.errorMessages.push('Unknown validation error');
           }
           else if (lang === 'de'){
-            this.errorMessages.push('Unbekannter Validierungsfehler.');
+            this.errorMessages.push('Unbekannter Validierungsfehler');
           }
           else if (lang === 'sl'){
-            this.errorMessages.push('Neznana napaka validacije.');
+            this.errorMessages.push('Neznana napaka validacije');
           }
           else {
-            this.errorMessages.push('Unknown validation error.');
+            this.errorMessages.push('Unknown validation error');
           }
         }
       }
