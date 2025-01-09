@@ -55,7 +55,8 @@
     "forgotPassword" : "Pozabljeno geslo",
     "resetPassword" : "Ponastavi ga tukaj",
     "reset" : "Resetiraj",
-    "resetForm" : "Forma za ponastavitev gesla"
+    "resetForm" : "Forma za ponastavitev gesla",
+    "shipment": "Stroški dostave"
     
 
 }
