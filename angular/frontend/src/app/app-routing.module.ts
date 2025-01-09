@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'register', component:RegisterPageComponent},
   {path: 'branches', component:BranchesComponent},
   {path: 'checkout', component: CheckoutPageComponent, canActivate:[AuthGuard]},
-  {path: 'payment', component:PaymentPageComponent},
+  {path: 'payment', component:PaymentPageComponent, canActivate:[AuthGuard]},
   {path: 'forgot-password', component:ResetPasswordComponent},
 
 ];

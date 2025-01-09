@@ -4,6 +4,7 @@ import { HTTP_BAD_REQUEST } from '../constants/http_status';
 import { OrderModel } from '../models/order.model';
 import { OrderStatus } from '../constants/order_status';
 import auth from '../middlewares/auth.mid';
+import { AnyExpression } from 'mongoose';
 
 const router = Router();
 router.use(auth);
@@ -27,5 +28,11 @@ asyncHander(async (req:any, res:any) => {
     res.send(newOrder);
 })
 )
+
+router.get('/newOrderForCurrentUser', asyncHander( async (req:any,res) => {
+    const order = await OrderModel.findOne({user: req.user.id, status: OrderStatus.NEW});
+    if(order) res.send(order);
+    else res.status(HTTP_BAD_REQUEST).send();
+}))
 
 export default router;
