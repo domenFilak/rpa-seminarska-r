@@ -70,7 +70,8 @@
     "pay": "Pay",
     "selectPaymentMethod": "Select payment method",
     "cardNumber": "Card number",
-    "walletAddress": "Wallet address"
+    "walletAddress": "Wallet address",
+    "newPasswordGenerated" : "New generated password"    
 
 
 }

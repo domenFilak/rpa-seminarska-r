@@ -36,7 +36,7 @@ export class ResetPasswordComponent implements OnInit {
     const email = this.fc.email.value;
 
     this.userService.requestPasswordReset(email).subscribe((password) => {
-      this.newPassword = password; // Display the new password in the UI
+      this.newPassword = password; 
     });
   }
 }

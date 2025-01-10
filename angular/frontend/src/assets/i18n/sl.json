@@ -70,7 +70,7 @@
     "pay": "Plačaj",
     "selectPaymentMethod": "Izberite način plačila",
     "cardNumber": "Številka kartice",
-    "walletAddress": "Url denarnice"
-    
+    "walletAddress": "Url denarnice",
+    "newPasswordGenerated" : "Zgenerirano novo geslo"    
 
 }

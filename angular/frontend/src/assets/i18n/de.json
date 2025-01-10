@@ -70,7 +70,8 @@
     "pay": "Bezahlen",
     "selectPaymentMethod": "Wählen Sie die Zahlungsmethode",
     "cardNumber": "Kartennummer",
-    "walletAddress": "Wallet-Adresse"
+    "walletAddress": "Wallet-Adresse",
+    "newPasswordGenerated" : "Neues generiertes Passwort"  
 
 
 
