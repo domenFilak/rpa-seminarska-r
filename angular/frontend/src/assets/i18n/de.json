@@ -22,7 +22,7 @@
     "resetLinkTextCart": "Gehe zur Homepage",
     "notFoundMessageHome": "Gesuchtes Essen nicht gefunden",
     "resetLinkTextHome": "Suche Zurücksetzen",
-    "priceTax": "Preis inkl. Steuer",
+    "priceTax": "Preis inkl. Steuer und Versandkosten",
     "tax": "Steuer",
     "priceNoTax": "Preis ohne Steuer",
     "filterBy": "Filtern nach",
@@ -49,14 +49,24 @@
     "loginHere" : "Bewerben Sie sich hier",
     "newUser" : "Neuer benutzer",
     "goToPayment" : "Fahren Sie mit der Zahlung fort",
-    "orderItems" : "Menge",
-    "total" : "Voller preis",
+    "total" : "Voller Bestellpreis",
     "orderForm" : "Bestellformular",
     "forgotPassword": "Passwort vergessen",
     "resetPassword": "Zurücksetzen",
     "reset" : "Zurücksetzen",
     "resetForm" : "Formular zum Zurücksetzen des Passworts",
-    "shipment": "Versandkosten"
+    "shipment": "Versandkosten",
+    "allUserOrders": "Alle meine Bestellungen",
+    "notFoundMessageOrders": "Es wurden keine Aufträge ausgeführt",
+    "orderItems": "Bestellartikel",
+    "orderId": "Bestellnummer",
+    "createdOn": "Erstellt am",
+    "pictureItem": "Artikelbild",
+    "nameItem": "Artikelname",
+    "itemSinglePrice": "Preis pro Artikel",
+    "itemQuantity": "Artikelmenge",
+    "fullItemsPrice": "Gesamtpreis der Artikel",
+    "status": "Bestellstatus"
 
 
 

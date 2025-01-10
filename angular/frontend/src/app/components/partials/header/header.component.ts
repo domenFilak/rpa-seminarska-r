@@ -3,6 +3,7 @@ import { CartService } from '../../../services/cart.service';
 import { TranslateService } from '@ngx-translate/core';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../shared/models/User';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class HeaderComponent implements OnInit {
   cartQuantity=0;
   user!: User;
 
-  constructor(private cartService:CartService, private translateService: TranslateService, private userService: UserService) {
+  constructor(private cartService:CartService, private translateService: TranslateService, private userService: UserService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -79,6 +80,10 @@ export class HeaderComponent implements OnInit {
 
   logout(){
     this.userService.logout();
+  }
+
+  orders(){
+    this.router.navigateByUrl('/orders');
   }
 
   get isAuth(){

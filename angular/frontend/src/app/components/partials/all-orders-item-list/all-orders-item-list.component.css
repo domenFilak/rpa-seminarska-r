@@ -1,0 +1,91 @@
+/* Make table scrollable */
+.table-container {
+    width: 100%;
+    overflow-y: auto; /* Enables horizontal scrolling if needed */
+    margin: 1rem 0;
+}
+
+table {
+    width: 100%; /* Ensure full width usage */
+    min-width: 600px; /* Ensures scrollability for narrow viewports */
+    table-layout: fixed;
+    border: 1px solid #eeeeee;
+    margin-top: 1rem;
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long content */
+    white-space: nowrap;
+}
+
+h3 {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    color: grey;
+    font-size: 1.2rem;
+}
+
+td img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.order-header {
+    margin-top: 2rem;
+    color: #444;
+    font-size: 1.5rem; /* Prominent order header */
+}
+
+.order-status {
+    font-weight: bold;
+    color: #00aa00;
+}
+
+.order-status.pending {
+    color: #ffa500;
+}
+
+.order-status.cancelled {
+    color: #ff0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.8rem;
+    }
+
+    td img {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    td img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}

@@ -30,6 +30,8 @@ import { OrderItemsListComponent } from './components/partials/order-items-list/
 import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { AllOrdersComponent } from './components/pages/all-orders/all-orders.component';
+import { AllOrdersItemListComponent } from './components/partials/all-orders-item-list/all-orders-item-list.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -58,7 +60,9 @@ export function HttpLoaderFactory(http: HttpClient){
     CheckoutPageComponent,
     OrderItemsListComponent,
     ResetPasswordComponent,
-    PaymentPageComponent
+    PaymentPageComponent,
+    AllOrdersComponent,
+    AllOrdersItemListComponent
     
   ],
   imports: [

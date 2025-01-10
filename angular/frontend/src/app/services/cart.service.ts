@@ -113,6 +113,8 @@ export class CartService {
     this.cart.totalCount = this.cart.items
       .reduce((prevSum, currentItem) => prevSum + currentItem.quantity, 0);
 
+    this.cart.totalPrice += 5; //za dostavo
+
     // Pretvori košarico v JSON in shrani v lokalno shrambo
     const cartJson = JSON.stringify(this.cart);
     localStorage.setItem('Cart', cartJson);
@@ -129,5 +131,6 @@ export class CartService {
     // Sicer vrni novo prazno košarico
     return cartJson ? JSON.parse(cartJson) : new Cart();
   }
+
 }
 

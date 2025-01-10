@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import asyncHander from 'express-async-handler'
+import asyncHandler from 'express-async-handler'
 import { HTTP_BAD_REQUEST } from '../constants/http_status';
 import { OrderModel } from '../models/order.model';
 import { OrderStatus } from '../constants/order_status';
@@ -10,7 +10,7 @@ const router = Router();
 router.use(auth);
 
 router.post('/create',
-asyncHander(async (req:any, res:any) => {
+asyncHandler(async (req:any, res:any) => {
     const requestOrder = req.body;
 
     if(requestOrder.items.length <= 0){
@@ -18,10 +18,12 @@ asyncHander(async (req:any, res:any) => {
         return;
     }
 
+    /*
     await OrderModel.deleteOne({
         user: req.user.id,
         status: OrderStatus.NEW
     });
+    */
 
     const newOrder = new OrderModel({...requestOrder, user: req.user.id});
     await newOrder.save();
@@ -29,10 +31,18 @@ asyncHander(async (req:any, res:any) => {
 })
 )
 
-router.get('/newOrderForCurrentUser', asyncHander( async (req:any,res) => {
-    const order = await OrderModel.findOne({user: req.user.id, status: OrderStatus.NEW});
+router.get('/newOrderForCurrentUser', asyncHandler( async (req:any,res) => {
+
+    const order = await OrderModel.findOne({user: req.user.id, status: OrderStatus.NEW}).sort({ createdAt: -1 });
     if(order) res.send(order);
     else res.status(HTTP_BAD_REQUEST).send();
-}))
+}));
+
+router.get('/allOrdersForCurrentUser', asyncHandler(async (req: any, res) => {
+    const orders = await OrderModel.find({ user: req.user.id, status: OrderStatus.NEW }).sort({ createdAt: -1 }); // Sort by createdAt in descending order, get all
+
+    res.send(orders); // Send all the orders
+
+}));
 
 export default router;

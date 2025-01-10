@@ -22,7 +22,7 @@
     "resetLinkTextCart": "Go To Homepage",
     "notFoundMessageHome": "Searched food not found",
     "resetLinkTextHome": "Reset Search",
-    "priceTax": "Price with tax",
+    "priceTax": "Price with tax and shipment",
     "tax": "Tax",
     "priceNoTax": "Price without tax",
     "filterBy": "Filter by",
@@ -46,21 +46,27 @@
     "register" : "Register",
     "registerHere" : "Register here",
     "alreadyAUser" : "Already a user",
-    "loginHere" : "Bewerben Sie sich hier",
+    "loginHere" : "Log in here",
     "newUser" : "New user",
     "goToPayment" : "Go to payment",
-    "orderItems" : "Quantity",
-    "total" : "Full price",
+    "total" : "Full order price",
     "orderForm" : "Order Form",
     "forgotPassword" : "Forgot password",
     "resetPassword" : "Reset it here",
     "reset" : "Reset",
     "resetForm" : "Reset password form",
-    "shipment": "Shipment cost"
-
-
-      
-
+    "shipment": "Shipment cost",
+    "allUserOrders": "All my orders",
+    "notFoundMessageOrders": "No orders have been made",
+    "orderItems": "Order items",
+    "orderId": "Order id",
+    "createdOn": "Created on",
+    "pictureItem" : "Item picture",
+    "nameItem": "Item name",
+    "itemSinglePrice": "Single item price",
+    "itemQuantity": "Item quantity",
+    "fullItemsPrice": "Full items price",
+    "status": "Order status"
 
 
 }

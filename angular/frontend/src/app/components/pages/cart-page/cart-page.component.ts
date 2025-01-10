@@ -29,6 +29,8 @@ export class CartPageComponent implements OnInit {
       this.cart = cart;
     });
 
+
+
   }
 
   // Remove item from the cart
@@ -43,6 +45,7 @@ export class CartPageComponent implements OnInit {
     
     this.cartService.changeQuantity(cartItem.food.id, quantity);
   }
+  
 
   
 }

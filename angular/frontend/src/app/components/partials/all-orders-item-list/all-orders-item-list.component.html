@@ -1,0 +1,59 @@
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">{{'orderId' | translate}}: <span style="font-weight: normal;">{{order.id}}</span></th>
+                <th colspan="2" style="text-align: right;">{{'createdOn' | translate}}: <span style="font-weight: normal;">{{order.createdAt | date:'dd.MM.yyyy HH:mm'}}</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <h3>{{'pictureItem' | translate}}</h3>
+                </td>
+                <td>
+                    <h3>{{'nameItem' | translate}}</h3>
+                </td>
+                <td>
+                    <h3>{{'itemSinglePrice' | translate}}</h3>
+                </td>
+                <td>
+                    <h3>{{'itemQuantity' | translate}}</h3>
+                </td>
+                <td>
+                    <h3>{{'fullItemsPrice' | translate}}</h3>
+                </td>
+            </tr>
+            <tr *ngFor="let item of order.items">
+                <td style="width: 10%;">
+                    <a routerLink="/food/{{item.food.id}}">
+                        <img [src]="item.food.imageUrl" alt="{{item.food.name}}" />
+                    </a>
+                </td>
+                <td style="width: 40%;">{{item.food.name}}</td>
+                <td style="width: 15%;">{{item.food.price}}€</td>
+                <td style="width: 10%;">{{item.quantity}}</td>
+                <td style="width: 15%;">{{item.price}}€</td>
+            </tr>
+            <hr style="border: 1px solid #eeeeee;">
+            <tr>
+                <td colspan="5">
+                    <strong>{{'status' | translate}}:</strong>
+                    <span class="order-status" [ngClass]="{'pending': order.status === 'Pending', 'cancelled': order.status === 'Cancelled'}">
+                        {{order.status | translate}}
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <strong>{{'total' | translate}}: </strong>
+                    <span>{{order.totalPrice}} €</span>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+

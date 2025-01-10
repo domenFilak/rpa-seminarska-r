@@ -12,19 +12,21 @@ import { Router } from '@angular/router';
 export class PaymentPageComponent implements OnInit {
 
   order:Order = new Order();
-  constructor(orderService: OrderService, router: Router) {
-    orderService.getNewOrderForCurrentUser().subscribe({
+  constructor(private orderService: OrderService, private router: Router) {
+
+  }
+  ngOnInit(): void {
+    this.orderService.getNewOrderForCurrentUser().subscribe({
       next: (order) => {
         this.order = order;
       },
       error:() => {
-        router.navigateByUrl('/checkout')
+        this.router.navigateByUrl('/checkout')
       }
-    })
+    });
 
   }
-  ngOnInit(): void {
-    
-  }
+
+
 
 }

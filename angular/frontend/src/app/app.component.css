@@ -1,0 +1,7 @@
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Optional, to make the background visible when sticky */
+    z-index: 1000; /* Ensures it's above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional, adds a slight shadow */
+}

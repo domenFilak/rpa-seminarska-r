@@ -6,6 +6,7 @@ import { UserService } from '../../../services/user.service';
 import { Order } from '../../../shared/models/Order';
 import { OrderService } from '../../../services/order.service';
 import { Router } from '@angular/router';
+import { User } from '../../../shared/models/User';
 
 @Component({
   selector: 'app-checkout-page',
@@ -15,6 +16,7 @@ import { Router } from '@angular/router';
 export class CheckoutPageComponent implements OnInit {
   order:Order = new Order();
   checkoutForm!: FormGroup;
+  user!: User;
   constructor(cartService:CartService,
               private formBuilder: FormBuilder,
               private userService: UserService,
@@ -30,6 +32,10 @@ export class CheckoutPageComponent implements OnInit {
     this.checkoutForm = this.formBuilder.group({
       name:[name, Validators.required],
       address:[address, Validators.required]
+    });
+
+    this.userService.userObservable.subscribe((newUser) => {
+      this.user = newUser;
     });
   }
   get fc(){
@@ -52,5 +58,9 @@ export class CheckoutPageComponent implements OnInit {
         this.toastrService.error(errorResponse.error, 'Cart');
       }
     })
+  }
+
+  get isAuth(){
+    return this.user.token;
   }
 }

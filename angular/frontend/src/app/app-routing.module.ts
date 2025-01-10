@@ -10,6 +10,7 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { ResetPasswordComponent } from './components/pages/reset-password/reset-password.component';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { AllOrdersComponent } from './components/pages/all-orders/all-orders.component';
 
 const routes: Routes = [
   //se gleda hierarhija pathov!!!
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'branches', component:BranchesComponent},
   {path: 'checkout', component: CheckoutPageComponent, canActivate:[AuthGuard]},
   {path: 'payment', component:PaymentPageComponent, canActivate:[AuthGuard]},
+  {path: 'orders', component:AllOrdersComponent, canActivate:[AuthGuard]},
   {path: 'forgot-password', component:ResetPasswordComponent},
 
 ];

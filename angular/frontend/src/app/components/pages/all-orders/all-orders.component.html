@@ -1,0 +1,16 @@
+<app-title title="{{'allUserOrders'|translate}}" margin="1.5rem 0 0 2.5rem"></app-title>
+<!-- prikažemo komponento app-not-found ter nastavimo njena polja -->
+<app-not-found
+[visible]="!orders || orders.length == 0"
+notFoundMessage="{{'notFoundMessageOrders' | translate}}!" 
+resetLinkText="{{'resetLinkTextCart' | translate}}"
+
+></app-not-found>
+
+<div class="container" *ngIf="orders !== null && orders.length > 0">
+    <div *ngFor="let order of orders">
+        <app-all-orders-item-list [order]="order"></app-all-orders-item-list>
+    </div>
+</div>
+
+

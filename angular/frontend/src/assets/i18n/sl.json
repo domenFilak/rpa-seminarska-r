@@ -22,7 +22,7 @@
     "resetLinkTextCart": "Pojdi na domačo stran",
     "notFoundMessageHome": "Iskana hrana ni najdena",
     "resetLinkTextHome": "Ponastavi Iskanje",
-    "priceTax": "Cena z DDV",
+    "priceTax": "Cena z DDV in dostavo",
     "tax": "DDV",
     "priceNoTax": "Cena brez DDV",
     "filterBy": "Filtriraj po",
@@ -49,14 +49,24 @@
     "loginHere" : "Prijavi se tukaj",
     "newUser" : "Nov uporabnik",
     "goToPayment" : "Naprej na plačilo",
-    "orderItems" : "Artikli na naročilu",
-    "total" : "Celotna cena",
+    "total" : "Skupna cena naročila",
     "orderForm" : "Naročilo",
     "forgotPassword" : "Pozabljeno geslo",
     "resetPassword" : "Ponastavi ga tukaj",
     "reset" : "Resetiraj",
     "resetForm" : "Forma za ponastavitev gesla",
-    "shipment": "Stroški dostave"
+    "shipment": "Stroški dostave",
+    "allUserOrders": "Vsa moja naročila",
+    "notFoundMessageOrders": "Nobeno naročilo ni bilo izvedeno",
+    "orderItems": "Izdelki naročila",
+    "orderId": "Id naročila",
+    "createdOn": "Ustvarjeno dne",
+    "pictureItem": "Slika artikla",
+    "nameItem": "Ime artikla",
+    "itemSinglePrice": "Cena artikla",
+    "itemQuantity": "Količina artiklov",
+    "fullItemsPrice": "Skupna cena artiklov",
+    "status": "Stanje naročila"
     
 
 }

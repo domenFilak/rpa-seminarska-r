@@ -46,7 +46,7 @@
     <div><span class="total-price-label">{{'tax' | translate}}: {{ cart.totalPrice * 0.22}}€</span></div>
     <div><span class="total-price-label">{{'priceNoTax' | translate}}: {{ (cart.totalPrice - cart.totalPrice * 0.22)}}€</span></div>
     <div><span class="total-price-label">{{'shipment' | translate}}: 5€</span></div>
-    <div><span class="total-price-label"><b>{{'priceTax'|translate}}: </b></span>{{cart.totalPrice + 5}}€</div>
+    <div><span class="total-price-label"><b>{{'priceTax'|translate}}: </b></span>{{cart.totalPrice}}€</div>
   </div>
   <a routerLink="/checkout">{{'proceedToCheckout' | translate}}</a>
 </div>
