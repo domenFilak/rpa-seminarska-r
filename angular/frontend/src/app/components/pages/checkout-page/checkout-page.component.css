@@ -16,19 +16,22 @@
 form{
   width: 100%;
 }
-.buttons-container{
+.buttons-container {
   flex-basis: 100%;
   display: flex;
   justify-content: center;
+  width: 100%; /* Make sure it takes up the full container width */
 }
-.buttons{
+
+.buttons {
   margin: 2rem;
-  width: 35rem;
+  width: 35rem; /* Keep the same width as defined */
 }
-button{
+
+button {
   color: white;
   background-color: #e72929;
-  width: 100%;
+  width: 100%; /* Ensure the button fills the container width */
   height: 3rem;
   opacity: 0.8;
   font-size: 1.3rem;
@@ -36,7 +39,8 @@ button{
   border-radius: 0.5rem;
   box-shadow: 2px 2px 2px 2px grey;
 }
-button:hover{
+
+button:hover {
   opacity: 1;
   cursor: pointer;
 }

@@ -12,9 +12,58 @@
       </div>
     </div>
     <order-items-list [order]="order"></order-items-list>
+    <div class="payMenu">
+      <h3 class="payMenuH3">{{"selectPaymentMethod"|translate}}:</h3>
+      <ul (mouseenter)="isMenuOpen = true" (mouseleave)="isMenuOpen = false">
+        <li class="menu-container">
+          <a>
+            <img *ngIf="selectedPaymentFlag" [src]="selectedPaymentFlag" alt="Payment" class="flag">
+            {{ selectedPaymentMethod }}
+          </a>
+          <div class="menu" *ngIf="isMenuOpen">
+            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'Card'" (click)="selectPaymentMethod('Card', 'assets/icons/card-icon.png')">
+              <img src="assets/icons/card-icon.png" alt="Card" class="flag">Card
+            </a>
+            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'Money'" (click)="selectPaymentMethod('Money', 'assets/icons/money-icon.png')">
+              <img src="assets/icons/money-icon.png" alt="Money" class="flag">Money
+            </a>
+            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'Bitcoin'" (click)="selectPaymentMethod('Bitcoin', 'assets/icons/crypto-icon.png')">
+              <img src="assets/icons/crypto-icon.png" alt="Bitcoin" class="flag">Bitcoin
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="selectedPaymentMethod === 'Card'">
+      <div class="containerPayment">
+        <label class="labelPayment">
+            {{'cardNumber'|translate}}
+        </label>
+        <div class="contentPayment">
+            <input class="inputPayment" type="text" placeholder="{{'cardNumber'|translate}}"/>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="selectedPaymentMethod === 'Bitcoin'">
+      <div class="containerPayment">
+        <label class="labelPayment">
+            {{'walletAddress'|translate}}
+        </label>
+        <div class="contentPayment">
+            <input class="inputPayment" type="text" placeholder="{{'walletAddress'|translate}}"/>
+        </div>
+      </div>
+    </div>
+
   </div>
+  
   <div class="buttons-container">
     <div class="buttons">
+      <button (click)="goToCart()">
+        {{'pay' | translate}}
+      </button>
     </div>
   </div>
 </div>

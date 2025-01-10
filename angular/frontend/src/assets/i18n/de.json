@@ -66,7 +66,12 @@
     "itemSinglePrice": "Preis pro Artikel",
     "itemQuantity": "Artikelmenge",
     "fullItemsPrice": "Gesamtpreis der Artikel",
-    "status": "Bestellstatus"
+    "status": "Bestellstatus",
+    "pay": "Bezahlen",
+    "selectPaymentMethod": "Wählen Sie die Zahlungsmethode",
+    "cardNumber": "Kartennummer",
+    "walletAddress": "Wallet-Adresse"
+
 
 
 

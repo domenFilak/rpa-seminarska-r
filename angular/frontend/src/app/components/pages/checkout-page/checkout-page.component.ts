@@ -52,6 +52,7 @@ export class CheckoutPageComponent implements OnInit {
 
     this.orderService.create(this.order).subscribe({
       next:() => {
+        localStorage.removeItem("Cart");
         this.router.navigateByUrl('/payment');
       },
       error:(errorResponse) => {

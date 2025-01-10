@@ -12,6 +12,11 @@ import { Router } from '@angular/router';
 export class PaymentPageComponent implements OnInit {
 
   order:Order = new Order();
+
+  selectedPaymentMethod = 'Money';
+  selectedPaymentFlag = 'assets/icons/money-icon.png';
+  isMenuOpen = false;
+
   constructor(private orderService: OrderService, private router: Router) {
 
   }
@@ -27,6 +32,15 @@ export class PaymentPageComponent implements OnInit {
 
   }
 
+  selectPaymentMethod(method: string, flag: string) {
+    this.selectedPaymentMethod = method;
+    this.selectedPaymentFlag = flag;
+    this.isMenuOpen = false;
+  }
+
+  goToCart() {
+    this.router.navigate(['/cart-page']);
+  }
 
 
 }
