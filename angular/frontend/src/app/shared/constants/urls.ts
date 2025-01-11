@@ -17,3 +17,5 @@ export const ORDERS_URL = BASE_URL + '/api/orders';
 export const ORDER_CREATE_URL = ORDERS_URL + '/create';
 export const ORDER_NEW_FOR_CURRENT_USER_URL = ORDERS_URL + '/newOrderForCurrentUser';
 export const ORDER_ALL_FOR_CURRENT_USER_URL = ORDERS_URL + '/allOrdersForCurrentUser';
+export const ORDER_GET_USER_URL = ORDERS_URL + '/user';
+export const ORDER_UPDATE_USER_URL = ORDERS_URL + '/user-update';

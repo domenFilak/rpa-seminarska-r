@@ -39,7 +39,7 @@
             <tr>
                 <td colspan="5">
                     <strong>{{'status' | translate}}:</strong>
-                    <span class="order-status" [ngClass]="{'pending': order.status === 'Pending', 'cancelled': order.status === 'Cancelled'}">
+                    <span class="order-status" [ngClass]="{'pending': order.status === 'PENDING', 'cancelled': order.status === 'CANCELED'}">
                         {{order.status | translate}}
                     </span>
                 </td>

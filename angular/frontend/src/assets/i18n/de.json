@@ -71,7 +71,9 @@
     "selectPaymentMethod": "Wählen Sie die Zahlungsmethode",
     "cardNumber": "Kartennummer",
     "walletAddress": "Wallet-Adresse",
-    "newPasswordGenerated" : "Neues generiertes Passwort"  
+    "newPasswordGenerated" : "Neues generiertes Passwort",
+    "update": "Aktualisieren",
+    "userProfil": "Benutzerprofil" 
 
 
 

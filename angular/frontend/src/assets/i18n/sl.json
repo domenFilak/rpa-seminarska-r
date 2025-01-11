@@ -71,6 +71,8 @@
     "selectPaymentMethod": "Izberite način plačila",
     "cardNumber": "Številka kartice",
     "walletAddress": "Url denarnice",
-    "newPasswordGenerated" : "Zgenerirano novo geslo"    
+    "newPasswordGenerated" : "Zgenerirano novo geslo",
+    "update": "Posodobi",
+    "userProfil": "Uporabniški profil"
 
 }

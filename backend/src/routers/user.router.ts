@@ -5,6 +5,7 @@ import asyncHandler from "express-async-handler";
 import { UserModel } from "../models/user.model";
 import bcrypt from 'bcryptjs'
 import { User } from "../interfaces/User";
+import auth from '../middlewares/auth.mid';
 
 
 const router = Router();
@@ -33,7 +34,6 @@ router.post("/login", asyncHandler(async(req, res) => {
   else {
     res.status(400).send("Username or password is not valid!");
   }
-
 }));
 
 router.post('/register', asyncHandler(
@@ -116,5 +116,7 @@ const generateTokenResponse = (user:any) => {
     token: token
   }
 }
+
+
 
 export default router;

@@ -27,6 +27,11 @@ export class UserService {
     return this.userSubject.value;
   }
 
+  changeUserSubject(updatedUser: User) {
+    this.setUserToLocalStorage(updatedUser);
+    this.userSubject.next(updatedUser);  // Pass the updated user data
+  }
+
   login(userLogin: IUserLogin): Observable<User> {
     return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
       tap({

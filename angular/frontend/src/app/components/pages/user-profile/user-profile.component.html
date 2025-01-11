@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="details">
+      <app-title title="{{'userProfil'|translate}}"></app-title>
+      <form [formGroup]="updateForm" (ngSubmit)="submit()">
+        <text-input
+          [control]="fc.name"
+          [showErrorsWhen]="isSubmitted"
+          label="{{'nameSurname'|translate}}"
+        ></text-input>
+        
+        <text-input
+          [control]="fc.email"
+          [showErrorsWhen]="isSubmitted"
+          label="{{'email'|translate}}"
+          type="email"
+        ></text-input>
+  
+        <text-input
+          [control]="fc.password"
+          [showErrorsWhen]="isSubmitted"
+          label="{{'password'|translate}}"
+          type="password"
+        ></text-input>
+  
+        <text-input
+          [control]="fc.address"
+          [showErrorsWhen]="isSubmitted"
+          label="{{'address'|translate}}"
+        ></text-input>
+  
+        <default-button text="Posodobi"></default-button>
+      </form>
+    </div>
+  </div>

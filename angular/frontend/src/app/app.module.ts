@@ -32,6 +32,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { AllOrdersComponent } from './components/pages/all-orders/all-orders.component';
 import { AllOrdersItemListComponent } from './components/partials/all-orders-item-list/all-orders-item-list.component';
+import { UserProfileComponent } from './components/pages/user-profile/user-profile.component';
 
 
 export function HttpLoaderFactory(http: HttpClient){
@@ -62,7 +63,8 @@ export function HttpLoaderFactory(http: HttpClient){
     ResetPasswordComponent,
     PaymentPageComponent,
     AllOrdersComponent,
-    AllOrdersItemListComponent
+    AllOrdersItemListComponent,
+    UserProfileComponent
     
   ],
   imports: [
