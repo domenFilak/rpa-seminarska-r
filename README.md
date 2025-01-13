@@ -25,7 +25,7 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
    - Uporabnik lahko izbere jezik aplikacije (označeno z zastavo in imenom jezika).
 
 ## Trenutno stanje
-Končane zahteve osnovnega nivoja
+Končane zahteve osnovnega nivoja (prikaz po kategorijah, urejanje, filtriranje, prijava, registracija, pozabljeno geslo, uporabniški profil, košarica, pregled naročil, ...)
 
 ## Namestitev
 Za namestitev in zagon projekta sledite spodnjim korakom:
