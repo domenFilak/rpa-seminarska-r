@@ -23,36 +23,22 @@ Projekt je razvit s pomočjo **Angular** za front-end, **ExpressJS** za back-end
    - Prijavljeni uporabniki imajo dostop do preteklih naročil s podrobnostmi.
 5. **Večjezičnost**
    - Uporabnik lahko izbere jezik aplikacije (označeno z zastavo in imenom jezika).
-6. **Ocene in mnenja**
-   - Dodajanje in prikaz mnenj ter ocen izdelkov.
 
-## Zaslonski posnetki
-Trenutno stanje:
-
-- Seznam izdelkov
-- Iskanje po nazivu
-- Iskanje po kategorijah
-- Možnost filtriranja po znamki, ceni
-- Povezava do podrobnih informacij o izdelku
-- Prikaz izdelkov v košarici, skupna cena, davki
-- Uporabnik lahko izbere jezik aplikacije (označeno z zastavo in imenom jezika).
-- Filtriranje izdelkov po nazivu in ceni (+/-), (-/+)
-- Dodani poslovalnici
-- Dodana zaloga artiklov po vsaki poslovalnici
-
-
-
-
-
-<img src="trenutno.png" alt="Zaslonski posnetek aplikacije" width="600">
-<img src="kosarica.png" alt="Zaslonski posnetek aplikacije-kosarica" width="600">
-
+## Trenutno stanje
+Končane zahteve osnovnega nivoja
 
 ## Namestitev
 Za namestitev in zagon projekta sledite spodnjim korakom:
 
 1. **Kloniranje repozitorija**  
    bash git clone https://github.com/domenFilak/rpa-seminarska-r.git
+
+2. **Zagon frontend-a in backend-a**  
+   ng serve => za frontend
+   npm run start => za backend
+
+3. **Povezava na aplikacijo**
+   http://localhost:4200
 
 ## Uporaba
 1. Prijavite se ali registrirajte kot nov uporabnik.
