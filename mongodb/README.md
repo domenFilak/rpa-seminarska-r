@@ -13,12 +13,12 @@ Podatkovna baza je ustvarjena s pomočjo MongoDB verzija 8.0.3
 
 ### 3. Korak
 	- odpreš bash v mapi kjer želiš shraniti vnose
-	- shranis v to mapo z ukazom: mongodump --db=imePodatkovneBaze --out=potDoMapeKamorŽelišShranitiVnose
+	- shranis v to mapo z ukazom: mongodump --db=imePodatkovneBaze --out="potDoMapeKamorŽelišShranitiVnose"
 
 
 ## Kako shraniti bazo v svoj MongoDB
 
 ### 1. Korak
-	- dodas z ukazom: mongorestore --db=imePodatkovneBaze potKjerImasShranjeneVnose
+	- dodas z ukazom: mongorestore --db=imePodatkovneBaze "potKjerImasShranjeneVnose"
 												
 
