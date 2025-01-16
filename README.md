@@ -1,6 +1,6 @@
 # Spletna Trgovina
 
-**Status projekta**: Se izvaja (izboljšuje) 🟢
+**Status projekta**: Zaključen 🟢
 
 
 ## Opis
