@@ -1,6 +1,6 @@
 <div class="container">
   <div class="content">
-    <app-title title="{{'Order Summary' | translate}}" fontSize="1.6rem"></app-title>
+    <app-title title="{{'orderSummary' | translate}}" fontSize="1.6rem"></app-title>
     <div class="summary">
       <div>
         <h3>{{'name'|translate}}:</h3>
@@ -18,17 +18,17 @@
         <li class="menu-container">
           <a>
             <img *ngIf="selectedPaymentFlag" [src]="selectedPaymentFlag" alt="Payment" class="flag">
-            {{ selectedPaymentMethod }}
+            {{ selectedPaymentMethod + '' | translate }}
           </a>
           <div class="menu" *ngIf="isMenuOpen">
-            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'Card'" (click)="selectPaymentMethod('Card', 'assets/icons/card-icon.png')">
-              <img src="assets/icons/card-icon.png" alt="Card" class="flag">Card
+            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'card'" (click)="selectPaymentMethod('card', 'assets/icons/card-icon.png')">
+              <img src="assets/icons/card-icon.png" alt="Card" class="flag">{{'card'|translate}}
             </a>
-            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'Money'" (click)="selectPaymentMethod('Money', 'assets/icons/money-icon.png')">
-              <img src="assets/icons/money-icon.png" alt="Money" class="flag">Money
+            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'money'" (click)="selectPaymentMethod('money', 'assets/icons/money-icon.png')">
+              <img src="assets/icons/money-icon.png" alt="Money" class="flag">{{'money'|translate}}
             </a>
-            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'Bitcoin'" (click)="selectPaymentMethod('Bitcoin', 'assets/icons/crypto-icon.png')">
-              <img src="assets/icons/crypto-icon.png" alt="Bitcoin" class="flag">Bitcoin
+            <a class="dropdown-item" [class.selected]="selectedPaymentMethod === 'bitcoin'" (click)="selectPaymentMethod('bitcoin', 'assets/icons/crypto-icon.png')">
+              <img src="assets/icons/crypto-icon.png" alt="Bitcoin" class="flag">{{'bitcoin'|translate}}
             </a>
           </div>
         </li>

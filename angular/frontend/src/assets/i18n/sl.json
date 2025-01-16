@@ -73,6 +73,10 @@
     "walletAddress": "Url denarnice",
     "newPasswordGenerated" : "Zgenerirano novo geslo",
     "update": "Posodobi",
-    "userProfil": "Uporabniški profil"
+    "userProfil": "Uporabniški profil",
+    "card": "Bančna kartica",
+    "money": "Denar (ob dostavi)",
+    "bitcoin": "Bitcoin",
+    "orderSummary": "Povzetek naročila"
 
 }

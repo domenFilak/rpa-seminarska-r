@@ -73,7 +73,11 @@
     "walletAddress": "Wallet address",
     "newPasswordGenerated" : "New generated password",
     "update": "Update",
-    "userProfil": "User profile"
+    "userProfil": "User profile",
+    "card": "Credit card",
+    "money": "Money",
+    "bitcoin": "Bitcoin",
+    "orderSummary": "Order summary"
 
 
 }

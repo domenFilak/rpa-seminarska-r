@@ -73,7 +73,11 @@
     "walletAddress": "Wallet-Adresse",
     "newPasswordGenerated" : "Neues generiertes Passwort",
     "update": "Aktualisieren",
-    "userProfil": "Benutzerprofil" 
+    "userProfil": "Benutzerprofil",
+    "card": "Karten",
+    "money": "Geld",
+    "bitcoin": "Bitcoin",
+    "orderSummary": "Bestellübersicht" 
 
 
 

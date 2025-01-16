@@ -13,9 +13,11 @@ export class PaymentPageComponent implements OnInit {
 
   order:Order = new Order();
 
-  selectedPaymentMethod = 'Money';
+  selectedPaymentMethod = 'money';
   selectedPaymentFlag = 'assets/icons/money-icon.png';
   isMenuOpen = false;
+
+  selectedPaymentMethodString = "";
 
   constructor(private orderService: OrderService, private router: Router) {
 
