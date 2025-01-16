@@ -40,6 +40,10 @@ Za namestitev in zagon projekta sledite spodnjim korakom:
 3. **Povezava na aplikacijo**
    http://localhost:4200
 
+4. **OPOMBA!**
+   Za pravilno delovanje aplikacije je potrebno imeti .env datoteko v backend mapi,
+   za pridobitev datoteke se obrnite na enega izmed spodnjih e-mail naslovov.
+
 ## Uporaba
 1. Prijavite se ali registrirajte kot nov uporabnik.
 2. Brskajte po izdelkih, uporabite filtre ali iskalno vrstico.
